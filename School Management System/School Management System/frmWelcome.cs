@@ -16,5 +16,26 @@ namespace School_Management_System
         {
             InitializeComponent();
         }
+
+        private void btnAdmin_Click(object sender, EventArgs e)
+        {
+            Cache.isAdmin = true;
+            ActiveForm.Hide();
+            (new frmLogin()).Show();
+           
+        }
+
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+            Cache.isAdmin = false;
+            ActiveForm.Hide();
+            (new frmLogin()).Show();
+            
+        }
+
+        private void frmWelcome_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

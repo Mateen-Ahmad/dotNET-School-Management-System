@@ -1,0 +1,14 @@
+C:\Users\Haseeb virk\Documents\GitHub\School_Management_System\School Management System\School Management System\bin\Debug\School Management System.exe.config
+C:\Users\Haseeb virk\Documents\GitHub\School_Management_System\School Management System\School Management System\bin\Debug\School Management System.exe
+C:\Users\Haseeb virk\Documents\GitHub\School_Management_System\School Management System\School Management System\bin\Debug\School Management System.pdb
+C:\Users\Haseeb virk\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School Management System.csprojAssemblyReference.cache
+C:\Users\Haseeb virk\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School_Management_System.frmLogin.resources
+C:\Users\Haseeb virk\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School_Management_System.frmWelcome.resources
+C:\Users\Haseeb virk\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School_Management_System.Properties.Resources.resources
+C:\Users\Haseeb virk\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School_Management_System.ucUsers.resources
+C:\Users\Haseeb virk\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School Management System.csproj.GenerateResource.cache
+C:\Users\Haseeb virk\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School Management System.csproj.CoreCompileInputs.cache
+C:\Users\Haseeb virk\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School Management System.exe
+C:\Users\Haseeb virk\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School Management System.pdb
+C:\Users\Haseeb virk\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School_Management_System.frmMain.resources
+C:\Users\Haseeb virk\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School_Management_System.usSideNav.resources
