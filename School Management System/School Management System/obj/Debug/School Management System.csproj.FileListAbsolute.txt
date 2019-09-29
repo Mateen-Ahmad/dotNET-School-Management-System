@@ -12,3 +12,17 @@ C:\Users\Haseeb virk\Documents\GitHub\School_Management_System\School Management
 C:\Users\Haseeb virk\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School Management System.pdb
 C:\Users\Haseeb virk\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School_Management_System.frmMain.resources
 C:\Users\Haseeb virk\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School_Management_System.usSideNav.resources
+D:\School_Management_System-InitialCommit_Branch-Base-\School Management System\School Management System\bin\Debug\School Management System.exe.config
+D:\School_Management_System-InitialCommit_Branch-Base-\School Management System\School Management System\bin\Debug\School Management System.exe
+D:\School_Management_System-InitialCommit_Branch-Base-\School Management System\School Management System\bin\Debug\School Management System.pdb
+D:\School_Management_System-InitialCommit_Branch-Base-\School Management System\School Management System\obj\Debug\School_Management_System.frmLogin.resources
+D:\School_Management_System-InitialCommit_Branch-Base-\School Management System\School Management System\obj\Debug\School_Management_System.frmMain.resources
+D:\School_Management_System-InitialCommit_Branch-Base-\School Management System\School Management System\obj\Debug\School_Management_System.frmWelcome.resources
+D:\School_Management_System-InitialCommit_Branch-Base-\School Management System\School Management System\obj\Debug\School_Management_System.Properties.Resources.resources
+D:\School_Management_System-InitialCommit_Branch-Base-\School Management System\School Management System\obj\Debug\School_Management_System.ucStudents.resources
+D:\School_Management_System-InitialCommit_Branch-Base-\School Management System\School Management System\obj\Debug\School_Management_System.ucUsers.resources
+D:\School_Management_System-InitialCommit_Branch-Base-\School Management System\School Management System\obj\Debug\School_Management_System.usSideNav.resources
+D:\School_Management_System-InitialCommit_Branch-Base-\School Management System\School Management System\obj\Debug\School Management System.csproj.GenerateResource.cache
+D:\School_Management_System-InitialCommit_Branch-Base-\School Management System\School Management System\obj\Debug\School Management System.exe
+D:\School_Management_System-InitialCommit_Branch-Base-\School Management System\School Management System\obj\Debug\School Management System.pdb
+D:\School_Management_System-InitialCommit_Branch-Base-\School Management System\School Management System\obj\Debug\School_Management_System.frmMateen.resources
