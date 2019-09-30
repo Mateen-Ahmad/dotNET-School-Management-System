@@ -90,6 +90,7 @@
             this.btnAdmission.TabIndex = 5;
             this.btnAdmission.Text = "Admission";
             this.btnAdmission.UseVisualStyleBackColor = true;
+            this.btnAdmission.Click += new System.EventHandler(this.btnAdmission_Click);
             // 
             // btnAdmin
             // 
@@ -114,6 +115,7 @@
             this.Controls.Add(this.btnHome);
             this.Name = "usSideNav";
             this.Size = new System.Drawing.Size(184, 427);
+            this.Load += new System.EventHandler(this.usSideNav_Load);
             this.ResumeLayout(false);
 
         }

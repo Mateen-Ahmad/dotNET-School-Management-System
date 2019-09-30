@@ -30,6 +30,7 @@
         {
             this.usSideNav1 = new School_Management_System.usSideNav();
             this.ucUsers1 = new School_Management_System.ucUsers();
+            this.ucStudents1 = new School_Management_System.ucStudents();
             this.SuspendLayout();
             // 
             // usSideNav1
@@ -42,16 +43,24 @@
             // 
             // ucUsers1
             // 
-            this.ucUsers1.Location = new System.Drawing.Point(226, 12);
+            this.ucUsers1.Location = new System.Drawing.Point(235, 20);
             this.ucUsers1.Name = "ucUsers1";
-            this.ucUsers1.Size = new System.Drawing.Size(687, 406);
+            this.ucUsers1.Size = new System.Drawing.Size(683, 405);
             this.ucUsers1.TabIndex = 1;
+            // 
+            // ucStudents1
+            // 
+            this.ucStudents1.Location = new System.Drawing.Point(182, 55);
+            this.ucStudents1.Name = "ucStudents1";
+            this.ucStudents1.Size = new System.Drawing.Size(774, 341);
+            this.ucStudents1.TabIndex = 2;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(968, 437);
+            this.Controls.Add(this.ucStudents1);
             this.Controls.Add(this.ucUsers1);
             this.Controls.Add(this.usSideNav1);
             this.Name = "frmMain";
@@ -65,5 +74,6 @@
 
         private usSideNav usSideNav1;
         private ucUsers ucUsers1;
+        private ucStudents ucStudents1;
     }
 }

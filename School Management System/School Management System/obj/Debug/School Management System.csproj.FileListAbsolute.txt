@@ -26,3 +26,5 @@ D:\School_Management_System-InitialCommit_Branch-Base-\School Management System\
 D:\School_Management_System-InitialCommit_Branch-Base-\School Management System\School Management System\obj\Debug\School Management System.exe
 D:\School_Management_System-InitialCommit_Branch-Base-\School Management System\School Management System\obj\Debug\School Management System.pdb
 D:\School_Management_System-InitialCommit_Branch-Base-\School Management System\School Management System\obj\Debug\School_Management_System.frmMateen.resources
+C:\Users\Haseeb virk\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School_Management_System.frmMateen.resources
+C:\Users\Haseeb virk\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School_Management_System.ucStudents.resources
