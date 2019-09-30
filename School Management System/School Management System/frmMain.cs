@@ -30,10 +30,14 @@ namespace School_Management_System
         private void frmMain_Load(object sender, EventArgs e)
         {
             Cache.ucUsers = ucUsers1;
-            Cache.ucUsers.Show();
             Cache.activeUC = ucUsers1;
             Cache.ucStudent = ucStudents1;
             Cache.ucStudent.Hide();
+        }
+
+        private void ucUsers1_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

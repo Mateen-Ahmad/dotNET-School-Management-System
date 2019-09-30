@@ -35,5 +35,12 @@ namespace School_Management_System
         {
 
         }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            Cache.activeUC.Hide();
+            Cache.ucHome.Show();
+            Cache.activeUC = Cache.ucHome;
+        }
     }
 }
