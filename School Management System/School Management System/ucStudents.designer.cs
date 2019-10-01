@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgvStudent = new System.Windows.Forms.DataGridView();
-            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblName = new System.Windows.Forms.Label();
             this.lblFatherName = new System.Windows.Forms.Label();
             this.lblPhoneNumber = new System.Windows.Forms.Label();
@@ -46,6 +45,7 @@
             this.txtRollNumber = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rollNumberDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fatherNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -78,21 +78,17 @@
             this.Edit,
             this.Delete});
             this.dgvStudent.DataSource = this.studentBindingSource;
-            this.dgvStudent.Location = new System.Drawing.Point(12, 253);
+            this.dgvStudent.Location = new System.Drawing.Point(12, 241);
             this.dgvStudent.Name = "dgvStudent";
             this.dgvStudent.ReadOnly = true;
-            this.dgvStudent.Size = new System.Drawing.Size(815, 212);
+            this.dgvStudent.Size = new System.Drawing.Size(843, 212);
             this.dgvStudent.TabIndex = 0;
             this.dgvStudent.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // studentBindingSource
-            // 
-            this.studentBindingSource.DataSource = typeof(School_Management_System.Student);
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(129, 105);
+            this.lblName.Location = new System.Drawing.Point(129, 89);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(35, 13);
             this.lblName.TabIndex = 1;
@@ -101,7 +97,7 @@
             // lblFatherName
             // 
             this.lblFatherName.AutoSize = true;
-            this.lblFatherName.Location = new System.Drawing.Point(129, 138);
+            this.lblFatherName.Location = new System.Drawing.Point(129, 122);
             this.lblFatherName.Name = "lblFatherName";
             this.lblFatherName.Size = new System.Drawing.Size(68, 13);
             this.lblFatherName.TabIndex = 2;
@@ -110,7 +106,7 @@
             // lblPhoneNumber
             // 
             this.lblPhoneNumber.AutoSize = true;
-            this.lblPhoneNumber.Location = new System.Drawing.Point(129, 171);
+            this.lblPhoneNumber.Location = new System.Drawing.Point(129, 155);
             this.lblPhoneNumber.Name = "lblPhoneNumber";
             this.lblPhoneNumber.Size = new System.Drawing.Size(58, 13);
             this.lblPhoneNumber.TabIndex = 3;
@@ -119,7 +115,7 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(129, 204);
+            this.lblEmail.Location = new System.Drawing.Point(129, 188);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(32, 13);
             this.lblEmail.TabIndex = 4;
@@ -128,7 +124,7 @@
             // lblRollNumber
             // 
             this.lblRollNumber.AutoSize = true;
-            this.lblRollNumber.Location = new System.Drawing.Point(129, 72);
+            this.lblRollNumber.Location = new System.Drawing.Point(129, 56);
             this.lblRollNumber.Name = "lblRollNumber";
             this.lblRollNumber.Size = new System.Drawing.Size(45, 13);
             this.lblRollNumber.TabIndex = 5;
@@ -136,35 +132,35 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(229, 98);
+            this.txtName.Location = new System.Drawing.Point(229, 82);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(106, 20);
             this.txtName.TabIndex = 6;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(229, 197);
+            this.txtEmail.Location = new System.Drawing.Point(229, 181);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(106, 20);
             this.txtEmail.TabIndex = 7;
             // 
             // txtFatherName
             // 
-            this.txtFatherName.Location = new System.Drawing.Point(229, 131);
+            this.txtFatherName.Location = new System.Drawing.Point(229, 115);
             this.txtFatherName.Name = "txtFatherName";
             this.txtFatherName.Size = new System.Drawing.Size(106, 20);
             this.txtFatherName.TabIndex = 8;
             // 
             // txtPhoneNumber
             // 
-            this.txtPhoneNumber.Location = new System.Drawing.Point(229, 164);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(229, 148);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(106, 20);
             this.txtPhoneNumber.TabIndex = 9;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(367, 138);
+            this.btnAdd.Location = new System.Drawing.Point(367, 122);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 10;
@@ -175,7 +171,7 @@
             // lblClass
             // 
             this.lblClass.AutoSize = true;
-            this.lblClass.Location = new System.Drawing.Point(129, 237);
+            this.lblClass.Location = new System.Drawing.Point(129, 221);
             this.lblClass.Name = "lblClass";
             this.lblClass.Size = new System.Drawing.Size(32, 13);
             this.lblClass.TabIndex = 11;
@@ -193,21 +189,21 @@
             "3",
             "4",
             "5"});
-            this.cmbClass.Location = new System.Drawing.Point(229, 230);
+            this.cmbClass.Location = new System.Drawing.Point(229, 214);
             this.cmbClass.Name = "cmbClass";
             this.cmbClass.Size = new System.Drawing.Size(106, 21);
             this.cmbClass.TabIndex = 12;
             // 
             // txtRollNumber
             // 
-            this.txtRollNumber.Location = new System.Drawing.Point(229, 65);
+            this.txtRollNumber.Location = new System.Drawing.Point(229, 49);
             this.txtRollNumber.Name = "txtRollNumber";
             this.txtRollNumber.Size = new System.Drawing.Size(106, 20);
             this.txtRollNumber.TabIndex = 13;
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(514, 227);
+            this.btnSave.Location = new System.Drawing.Point(512, 211);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 15;
@@ -220,11 +216,15 @@
             this.label1.AutoSize = true;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label1.Font = new System.Drawing.Font("Sitka Text", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(342, 9);
+            this.label1.Location = new System.Drawing.Point(342, 2);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(116, 37);
             this.label1.TabIndex = 16;
             this.label1.Text = "Students";
+            // 
+            // studentBindingSource
+            // 
+            this.studentBindingSource.DataSource = typeof(School_Management_System.Student);
             // 
             // rollNumberDataGridViewTextBoxColumn1
             // 
@@ -264,10 +264,10 @@
             // class1DataGridViewTextBoxColumn
             // 
             this.class1DataGridViewTextBoxColumn.DataPropertyName = "Class1";
-            this.class1DataGridViewTextBoxColumn.HeaderText = "Class1";
+            this.class1DataGridViewTextBoxColumn.HeaderText = "Class ";
             this.class1DataGridViewTextBoxColumn.Name = "class1DataGridViewTextBoxColumn";
             this.class1DataGridViewTextBoxColumn.ReadOnly = true;
-            this.class1DataGridViewTextBoxColumn.Width = 40;
+            this.class1DataGridViewTextBoxColumn.Width = 50;
             // 
             // createdByDataGridViewTextBoxColumn1
             // 
@@ -292,7 +292,7 @@
             this.Edit.ReadOnly = true;
             this.Edit.Text = "Edit";
             this.Edit.UseColumnTextForButtonValue = true;
-            this.Edit.Width = 40;
+            this.Edit.Width = 50;
             // 
             // Delete
             // 
@@ -302,7 +302,7 @@
             this.Delete.ReadOnly = true;
             this.Delete.Text = "Delete";
             this.Delete.UseColumnTextForButtonValue = true;
-            this.Delete.Width = 40;
+            this.Delete.Width = 50;
             // 
             // ucStudents
             // 
@@ -325,7 +325,7 @@
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.dgvStudent);
             this.Name = "ucStudents";
-            this.Size = new System.Drawing.Size(841, 486);
+            this.Size = new System.Drawing.Size(866, 486);
             this.Load += new System.EventHandler(this.ucStudents_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();

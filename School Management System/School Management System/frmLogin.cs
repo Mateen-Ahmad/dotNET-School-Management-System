@@ -52,7 +52,7 @@ namespace School_Management_System
         {
             var connection = new SqlConnection(Cache.connection);
             connection.Open();
-            string query = "select count * from tbUser where userName='" + user.UserName + "' and userPassword='" + user.Password + "'";
+            string query = "select count (*) from tbUser where userName='" + user.UserName + "' and userPassword='" + user.Password + "'";
             var cmd = new SqlCommand(query, connection);
             var count = cmd.ExecuteScalar();
             connection.Close();
