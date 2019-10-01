@@ -28,19 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.usSideNav1 = new School_Management_System.usSideNav();
-            this.ucUsers1 = new School_Management_System.ucUsers();
+            this.ucHome1 = new School_Management_System.ucHome();
             this.ucStudents1 = new School_Management_System.ucStudents();
-            this.ucStudents2 = new School_Management_System.ucStudents();
+            this.ucUsers1 = new School_Management_System.ucUsers();
+            this.usSideNav1 = new School_Management_System.usSideNav();
             this.SuspendLayout();
             // 
-            // usSideNav1
+            // ucHome1
             // 
-            this.usSideNav1.Location = new System.Drawing.Point(0, -2);
-            this.usSideNav1.Name = "usSideNav1";
-            this.usSideNav1.Size = new System.Drawing.Size(184, 427);
-            this.usSideNav1.TabIndex = 0;
-            this.usSideNav1.Load += new System.EventHandler(this.usSideNav1_Load);
+            this.ucHome1.Location = new System.Drawing.Point(182, 20);
+            this.ucHome1.Name = "ucHome1";
+            this.ucHome1.Size = new System.Drawing.Size(730, 356);
+            this.ucHome1.TabIndex = 4;
+            this.ucHome1.Load += new System.EventHandler(this.ucHome1_Load);
+            // 
+            // ucStudents1
+            // 
+            this.ucStudents1.Location = new System.Drawing.Point(182, 55);
+            this.ucStudents1.Name = "ucStudents1";
+            this.ucStudents1.Size = new System.Drawing.Size(774, 341);
+            this.ucStudents1.TabIndex = 2;
             // 
             // ucUsers1
             // 
@@ -50,26 +57,20 @@
             this.ucUsers1.TabIndex = 1;
             this.ucUsers1.Load += new System.EventHandler(this.ucUsers1_Load_1);
             // 
-            // ucStudents1
+            // usSideNav1
             // 
-            this.ucStudents1.Location = new System.Drawing.Point(182, 55);
-            this.ucStudents1.Name = "ucStudents1";
-            this.ucStudents1.Size = new System.Drawing.Size(774, 341);
-            this.ucStudents1.TabIndex = 2;
-            // 
-            // ucStudents2
-            // 
-            this.ucStudents2.Location = new System.Drawing.Point(821, 155);
-            this.ucStudents2.Name = "ucStudents2";
-            this.ucStudents2.Size = new System.Drawing.Size(841, 486);
-            this.ucStudents2.TabIndex = 3;
+            this.usSideNav1.Location = new System.Drawing.Point(0, -2);
+            this.usSideNav1.Name = "usSideNav1";
+            this.usSideNav1.Size = new System.Drawing.Size(184, 427);
+            this.usSideNav1.TabIndex = 0;
+            this.usSideNav1.Load += new System.EventHandler(this.usSideNav1_Load);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(968, 437);
-            this.Controls.Add(this.ucStudents2);
+            this.Controls.Add(this.ucHome1);
             this.Controls.Add(this.ucStudents1);
             this.Controls.Add(this.ucUsers1);
             this.Controls.Add(this.usSideNav1);
@@ -85,6 +86,6 @@
         private usSideNav usSideNav1;
         private ucUsers ucUsers1;
         private ucStudents ucStudents1;
-        private ucStudents ucStudents2;
+        private ucHome ucHome1;
     }
 }

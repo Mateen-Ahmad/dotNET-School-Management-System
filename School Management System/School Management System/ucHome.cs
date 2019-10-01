@@ -6,8 +6,8 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace School_Management_System
 {
@@ -18,32 +18,38 @@ namespace School_Management_System
             InitializeComponent();
         }
 
-        private void btnStudent_Click(object sender, EventArgs e)
+        private void ucHome_Load(object sender, EventArgs e)
         {
-            dgvHome.DataSource=getStudents();
-        }
-        List <Student> getStudents()
-        {
-            List<Student> students = new List<Student>();
-            SqlConnection connection = new SqlConnection(Cache.connection);
-            connection.Open();
-            string query = "select name,class from tbStudent";
-            SqlCommand cmd = new SqlCommand(query, connection);
-            var reader = cmd.ExecuteReader();
-            while (reader.Read())
-            {
-                Student student = new Student();
-                student.Name = reader[0].ToString();
-                student.Class1 = reader[1].ToString();
-                students.Add(student);
-            }
-            connection.Close();
-            return students;
+
         }
 
+        private void btnStudents_Click(object sender, EventArgs e)
+        {
+            DataTable table = new DataTable();
+            List<Student> students = getStudents();
+            table.Columns.Add("Name");
+            table.Columns.Add("Class");
+            for (int i = 0; i < students.Count; i++)
+            {
+                table.Rows.Add(students[i].Name, students[i].Class1);
+            }
+            BindingSource source = new BindingSource();
+            source.DataSource = table;
+            dgvHome.DataSource = source;
+        }
         private void btnClasses_Click(object sender, EventArgs e)
         {
-            dgvHome.DataSource=getClass();
+            
+            BindingSource source = new BindingSource();
+            source.DataSource = getClass();
+            dgvHome.DataSource = source;
+        }
+
+        private void btnEmployees_Click(object sender, EventArgs e)
+        {
+            BindingSource source = new BindingSource();
+            source.DataSource = getEmployes();
+            dgvHome.DataSource = source;
         }
         List<Class> getClass()
         {
@@ -53,18 +59,13 @@ namespace School_Management_System
             string query = "select class from tbClass";
             SqlCommand cmd = new SqlCommand(query, connection);
             var reader = cmd.ExecuteReader();
-            while(reader.Read())
+            while (reader.Read())
             {
                 Class classs = new Class();
-                classs.Clas = reader[0].ToString();
+                classs.ClassName = reader[0].ToString();
                 classes.Add(classs);
             }
             return classes;
-        }
-
-        private void btnEmployes_Click(object sender, EventArgs e)
-        {
-            dgvHome.DataSource=getEmployes();
         }
         List<Employ> getEmployes()
         {
@@ -83,5 +84,24 @@ namespace School_Management_System
             }
             return employs;
         }
+        List<Student> getStudents()
+        {
+            List<Student> students = new List<Student>();
+            SqlConnection connection = new SqlConnection(Cache.connection);
+            connection.Open();
+            string query = "select name,class from tbStudent";
+            SqlCommand cmd = new SqlCommand(query, connection);
+            var reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                Student student = new Student();
+                student.Name = reader[0].ToString();
+                student.Class1 = reader[1].ToString();
+                students.Add(student);
+            }
+            connection.Close();
+            return students;
+        }
     }
 }
+

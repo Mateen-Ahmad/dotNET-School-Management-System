@@ -8,8 +8,7 @@ namespace School_Management_System
 {
     class Class
     {
-        string clas;
-
-        public string Clas { get => clas; set => clas = value; }
+        string className;
+        public string ClassName { get => className; set => className = value; }
     }
 }
