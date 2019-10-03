@@ -20,11 +20,12 @@ namespace School_Management_System
 
         private void ucHome_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnStudents_Click(object sender, EventArgs e)
         {
+            dgvHome.Visible = true;
             DataTable table = new DataTable();
             List<Student> students = getStudents();
             table.Columns.Add("Name");
@@ -39,7 +40,7 @@ namespace School_Management_System
         }
         private void btnClasses_Click(object sender, EventArgs e)
         {
-            
+            dgvHome.Visible = true;
             BindingSource source = new BindingSource();
             source.DataSource = getClass();
             dgvHome.DataSource = source;
@@ -47,6 +48,7 @@ namespace School_Management_System
 
         private void btnEmployees_Click(object sender, EventArgs e)
         {
+            dgvHome.Visible = true;
             BindingSource source = new BindingSource();
             source.DataSource = getEmployes();
             dgvHome.DataSource = source;
@@ -101,6 +103,15 @@ namespace School_Management_System
             }
             connection.Close();
             return students;
+        }
+
+        private void ucHome_VisibleChanged(object sender, EventArgs e)
+        {
+            if(this.Visible)
+            {
+                dgvHome.DataSource = null;
+                dgvHome.Visible = false;
+            }
         }
     }
 }

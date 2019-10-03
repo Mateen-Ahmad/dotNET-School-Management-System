@@ -19,8 +19,12 @@ namespace School_Management_System
         {
             InitializeComponent();
         }
-
         private void ucStudents_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void load()
         {
             show();
             lblRollNumber.Hide();
@@ -193,6 +197,14 @@ namespace School_Management_System
             btnAdd.Show();
 
             show();
+        }
+
+        private void ucStudents_VisibleChanged(object sender, EventArgs e)
+        {
+            if (this.Visible)
+            {
+                load();
+            }
         }
     }
 }

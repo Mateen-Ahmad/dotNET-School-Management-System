@@ -87,6 +87,7 @@
             this.Name = "ucHome";
             this.Size = new System.Drawing.Size(730, 356);
             this.Load += new System.EventHandler(this.ucHome_Load);
+            this.VisibleChanged += new System.EventHandler(this.ucHome_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHome)).EndInit();
             this.ResumeLayout(false);
 

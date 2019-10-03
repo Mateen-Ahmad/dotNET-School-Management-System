@@ -139,5 +139,18 @@ namespace School_Management_System
                 show();
             }
         }
+
+        private void ucUsers_VisibleChanged(object sender, EventArgs e)
+        {
+            if(this.Visible)
+            {
+                show();
+                txtPassword.Hide();
+                txtUserName.Hide();
+                lblUserName.Hide();
+                lblPassword.Hide();
+                btnDone.Hide();
+            }
+        }
     }
 }

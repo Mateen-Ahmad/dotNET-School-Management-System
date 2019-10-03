@@ -46,7 +46,7 @@
             // 
             this.ucStudents1.Location = new System.Drawing.Point(182, 55);
             this.ucStudents1.Name = "ucStudents1";
-            this.ucStudents1.Size = new System.Drawing.Size(774, 341);
+            this.ucStudents1.Size = new System.Drawing.Size(839, 341);
             this.ucStudents1.TabIndex = 2;
             // 
             // ucUsers1
@@ -69,7 +69,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(968, 437);
+            this.ClientSize = new System.Drawing.Size(1033, 437);
             this.Controls.Add(this.ucHome1);
             this.Controls.Add(this.ucStudents1);
             this.Controls.Add(this.ucUsers1);

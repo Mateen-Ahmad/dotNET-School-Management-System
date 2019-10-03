@@ -29,6 +29,7 @@ namespace School_Management_System
             Cache.activeUC.Hide();
             Cache.ucStudent.Show();
             Cache.activeUC = Cache.ucStudent;
+            
         }
 
         private void usSideNav_Load(object sender, EventArgs e)
@@ -41,6 +42,7 @@ namespace School_Management_System
             Cache.activeUC.Hide();
             Cache.ucHome.Show();
             Cache.activeUC = Cache.ucHome;
+            
         }
     }
 }

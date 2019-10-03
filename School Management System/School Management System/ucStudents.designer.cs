@@ -30,6 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgvStudent = new System.Windows.Forms.DataGridView();
+            this.rollNumberDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fatherNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.class1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.createdByDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.createdDateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblName = new System.Windows.Forms.Label();
             this.lblFatherName = new System.Windows.Forms.Label();
@@ -46,16 +56,6 @@
             this.txtRollNumber = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.rollNumberDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fatherNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.class1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.createdByDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.createdDateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -84,6 +84,84 @@
             this.dgvStudent.Size = new System.Drawing.Size(815, 212);
             this.dgvStudent.TabIndex = 0;
             this.dgvStudent.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // rollNumberDataGridViewTextBoxColumn1
+            // 
+            this.rollNumberDataGridViewTextBoxColumn1.DataPropertyName = "RollNumber";
+            this.rollNumberDataGridViewTextBoxColumn1.HeaderText = "RollNumber";
+            this.rollNumberDataGridViewTextBoxColumn1.Name = "rollNumberDataGridViewTextBoxColumn1";
+            this.rollNumberDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // nameDataGridViewTextBoxColumn1
+            // 
+            this.nameDataGridViewTextBoxColumn1.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn1.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
+            this.nameDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // fatherNameDataGridViewTextBoxColumn1
+            // 
+            this.fatherNameDataGridViewTextBoxColumn1.DataPropertyName = "FatherName";
+            this.fatherNameDataGridViewTextBoxColumn1.HeaderText = "FatherName";
+            this.fatherNameDataGridViewTextBoxColumn1.Name = "fatherNameDataGridViewTextBoxColumn1";
+            this.fatherNameDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // phoneNumberDataGridViewTextBoxColumn
+            // 
+            this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
+            this.phoneNumberDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // emailDataGridViewTextBoxColumn1
+            // 
+            this.emailDataGridViewTextBoxColumn1.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn1.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn1.Name = "emailDataGridViewTextBoxColumn1";
+            this.emailDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // class1DataGridViewTextBoxColumn
+            // 
+            this.class1DataGridViewTextBoxColumn.DataPropertyName = "Class1";
+            this.class1DataGridViewTextBoxColumn.HeaderText = "Class1";
+            this.class1DataGridViewTextBoxColumn.Name = "class1DataGridViewTextBoxColumn";
+            this.class1DataGridViewTextBoxColumn.ReadOnly = true;
+            this.class1DataGridViewTextBoxColumn.Width = 40;
+            // 
+            // createdByDataGridViewTextBoxColumn1
+            // 
+            this.createdByDataGridViewTextBoxColumn1.DataPropertyName = "CreatedBy";
+            this.createdByDataGridViewTextBoxColumn1.HeaderText = "CreatedBy";
+            this.createdByDataGridViewTextBoxColumn1.Name = "createdByDataGridViewTextBoxColumn1";
+            this.createdByDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // createdDateDataGridViewTextBoxColumn1
+            // 
+            this.createdDateDataGridViewTextBoxColumn1.DataPropertyName = "CreatedDate";
+            this.createdDateDataGridViewTextBoxColumn1.HeaderText = "Date";
+            this.createdDateDataGridViewTextBoxColumn1.Name = "createdDateDataGridViewTextBoxColumn1";
+            this.createdDateDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.createdDateDataGridViewTextBoxColumn1.Width = 50;
+            // 
+            // Edit
+            // 
+            this.Edit.DataPropertyName = "RollNumber";
+            this.Edit.HeaderText = "Edit";
+            this.Edit.Name = "Edit";
+            this.Edit.ReadOnly = true;
+            this.Edit.Text = "Edit";
+            this.Edit.UseColumnTextForButtonValue = true;
+            this.Edit.Width = 40;
+            // 
+            // Delete
+            // 
+            this.Delete.DataPropertyName = "RollNumber";
+            this.Delete.HeaderText = "Delete";
+            this.Delete.Name = "Delete";
+            this.Delete.ReadOnly = true;
+            this.Delete.Text = "Delete";
+            this.Delete.UseColumnTextForButtonValue = true;
+            this.Delete.Width = 40;
             // 
             // studentBindingSource
             // 
@@ -226,84 +304,6 @@
             this.label1.TabIndex = 16;
             this.label1.Text = "Students";
             // 
-            // rollNumberDataGridViewTextBoxColumn1
-            // 
-            this.rollNumberDataGridViewTextBoxColumn1.DataPropertyName = "RollNumber";
-            this.rollNumberDataGridViewTextBoxColumn1.HeaderText = "RollNumber";
-            this.rollNumberDataGridViewTextBoxColumn1.Name = "rollNumberDataGridViewTextBoxColumn1";
-            this.rollNumberDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // nameDataGridViewTextBoxColumn1
-            // 
-            this.nameDataGridViewTextBoxColumn1.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn1.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
-            this.nameDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // fatherNameDataGridViewTextBoxColumn1
-            // 
-            this.fatherNameDataGridViewTextBoxColumn1.DataPropertyName = "FatherName";
-            this.fatherNameDataGridViewTextBoxColumn1.HeaderText = "FatherName";
-            this.fatherNameDataGridViewTextBoxColumn1.Name = "fatherNameDataGridViewTextBoxColumn1";
-            this.fatherNameDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // phoneNumberDataGridViewTextBoxColumn
-            // 
-            this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
-            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "PhoneNumber";
-            this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
-            this.phoneNumberDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // emailDataGridViewTextBoxColumn1
-            // 
-            this.emailDataGridViewTextBoxColumn1.DataPropertyName = "Email";
-            this.emailDataGridViewTextBoxColumn1.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn1.Name = "emailDataGridViewTextBoxColumn1";
-            this.emailDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // class1DataGridViewTextBoxColumn
-            // 
-            this.class1DataGridViewTextBoxColumn.DataPropertyName = "Class1";
-            this.class1DataGridViewTextBoxColumn.HeaderText = "Class1";
-            this.class1DataGridViewTextBoxColumn.Name = "class1DataGridViewTextBoxColumn";
-            this.class1DataGridViewTextBoxColumn.ReadOnly = true;
-            this.class1DataGridViewTextBoxColumn.Width = 40;
-            // 
-            // createdByDataGridViewTextBoxColumn1
-            // 
-            this.createdByDataGridViewTextBoxColumn1.DataPropertyName = "CreatedBy";
-            this.createdByDataGridViewTextBoxColumn1.HeaderText = "CreatedBy";
-            this.createdByDataGridViewTextBoxColumn1.Name = "createdByDataGridViewTextBoxColumn1";
-            this.createdByDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // createdDateDataGridViewTextBoxColumn1
-            // 
-            this.createdDateDataGridViewTextBoxColumn1.DataPropertyName = "CreatedDate";
-            this.createdDateDataGridViewTextBoxColumn1.HeaderText = "Date";
-            this.createdDateDataGridViewTextBoxColumn1.Name = "createdDateDataGridViewTextBoxColumn1";
-            this.createdDateDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.createdDateDataGridViewTextBoxColumn1.Width = 50;
-            // 
-            // Edit
-            // 
-            this.Edit.DataPropertyName = "RollNumber";
-            this.Edit.HeaderText = "Edit";
-            this.Edit.Name = "Edit";
-            this.Edit.ReadOnly = true;
-            this.Edit.Text = "Edit";
-            this.Edit.UseColumnTextForButtonValue = true;
-            this.Edit.Width = 40;
-            // 
-            // Delete
-            // 
-            this.Delete.DataPropertyName = "RollNumber";
-            this.Delete.HeaderText = "Delete";
-            this.Delete.Name = "Delete";
-            this.Delete.ReadOnly = true;
-            this.Delete.Text = "Delete";
-            this.Delete.UseColumnTextForButtonValue = true;
-            this.Delete.Width = 40;
-            // 
             // ucStudents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -327,6 +327,7 @@
             this.Name = "ucStudents";
             this.Size = new System.Drawing.Size(841, 486);
             this.Load += new System.EventHandler(this.ucStudents_Load);
+            this.VisibleChanged += new System.EventHandler(this.ucStudents_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
             this.ResumeLayout(false);
