@@ -31,8 +31,10 @@ namespace School_Management_System
         {
             Cache.ucHome=ucHome1;
             Cache.activeUC = ucHome1;
-            Cache.ucUsers = ucUsers1;
+            Cache.ucUsers = ucUsers2;
             Cache.ucUsers.Hide();
+            Cache.ucTeacher = ucTeacher1;
+            Cache.ucTeacher.Hide();
             Cache.ucStudent = ucStudents1;
             Cache.ucStudent.Hide();
         }
@@ -43,6 +45,11 @@ namespace School_Management_System
         }
 
         private void ucHome1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ucStudents1_Load(object sender, EventArgs e)
         {
 
         }

@@ -76,6 +76,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Student.cs" />
+    <Compile Include="Teacher.cs" />
     <Compile Include="ucHome.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -87,6 +88,12 @@
     </Compile>
     <Compile Include="ucStudents.designer.cs">
       <DependentUpon>ucStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucTeacher.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucTeacher.Designer.cs">
+      <DependentUpon>ucTeacher.cs</DependentUpon>
     </Compile>
     <Compile Include="ucUsers.cs">
       <SubType>UserControl</SubType>
@@ -128,6 +135,9 @@
     <EmbeddedResource Include="ucStudents.resx">
       <DependentUpon>ucStudents.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ucTeacher.resx">
+      <DependentUpon>ucTeacher.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucUsers.resx">
       <DependentUpon>ucUsers.cs</DependentUpon>
     </EmbeddedResource>
@@ -135,6 +145,7 @@
       <DependentUpon>usSideNav.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\DataSources\Student.datasource" />
+    <None Include="Properties\DataSources\Teacher.datasource" />
     <None Include="Properties\DataSources\User.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

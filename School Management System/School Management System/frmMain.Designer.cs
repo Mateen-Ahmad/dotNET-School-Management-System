@@ -28,15 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.ucUsers2 = new School_Management_System.ucUsers();
             this.ucHome1 = new School_Management_System.ucHome();
             this.ucStudents1 = new School_Management_System.ucStudents();
-            this.ucUsers1 = new School_Management_System.ucUsers();
             this.usSideNav1 = new School_Management_System.usSideNav();
+            this.ucTeacher1 = new School_Management_System.ucTeacher();
             this.SuspendLayout();
+            // 
+            // ucUsers2
+            // 
+            this.ucUsers2.Location = new System.Drawing.Point(206, 55);
+            this.ucUsers2.Name = "ucUsers2";
+            this.ucUsers2.Size = new System.Drawing.Size(687, 406);
+            this.ucUsers2.TabIndex = 5;
             // 
             // ucHome1
             // 
-            this.ucHome1.Location = new System.Drawing.Point(182, 20);
+            this.ucHome1.Location = new System.Drawing.Point(237, 157);
             this.ucHome1.Name = "ucHome1";
             this.ucHome1.Size = new System.Drawing.Size(730, 356);
             this.ucHome1.TabIndex = 4;
@@ -44,18 +52,11 @@
             // 
             // ucStudents1
             // 
-            this.ucStudents1.Location = new System.Drawing.Point(182, 55);
+            this.ucStudents1.Location = new System.Drawing.Point(163, 84);
             this.ucStudents1.Name = "ucStudents1";
             this.ucStudents1.Size = new System.Drawing.Size(839, 341);
             this.ucStudents1.TabIndex = 2;
-            // 
-            // ucUsers1
-            // 
-            this.ucUsers1.Location = new System.Drawing.Point(235, 20);
-            this.ucUsers1.Name = "ucUsers1";
-            this.ucUsers1.Size = new System.Drawing.Size(683, 405);
-            this.ucUsers1.TabIndex = 1;
-            this.ucUsers1.Load += new System.EventHandler(this.ucUsers1_Load_1);
+            this.ucStudents1.Load += new System.EventHandler(this.ucStudents1_Load);
             // 
             // usSideNav1
             // 
@@ -65,14 +66,22 @@
             this.usSideNav1.TabIndex = 0;
             this.usSideNav1.Load += new System.EventHandler(this.usSideNav1_Load);
             // 
+            // ucTeacher1
+            // 
+            this.ucTeacher1.Location = new System.Drawing.Point(206, 34);
+            this.ucTeacher1.Name = "ucTeacher1";
+            this.ucTeacher1.Size = new System.Drawing.Size(717, 408);
+            this.ucTeacher1.TabIndex = 6;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1033, 437);
+            this.Controls.Add(this.ucTeacher1);
+            this.Controls.Add(this.ucUsers2);
             this.Controls.Add(this.ucHome1);
             this.Controls.Add(this.ucStudents1);
-            this.Controls.Add(this.ucUsers1);
             this.Controls.Add(this.usSideNav1);
             this.Name = "frmMain";
             this.Text = "frmMain";
@@ -84,8 +93,9 @@
         #endregion
 
         private usSideNav usSideNav1;
-        private ucUsers ucUsers1;
         private ucStudents ucStudents1;
         private ucHome ucHome1;
+        private ucUsers ucUsers2;
+        private ucTeacher ucTeacher1;
     }
 }

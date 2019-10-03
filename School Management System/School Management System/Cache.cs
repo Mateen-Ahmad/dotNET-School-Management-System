@@ -15,5 +15,6 @@ namespace School_Management_System
         public static ucUsers ucUsers;
         public static ucStudents ucStudent;
         public static ucHome ucHome;
+        public static ucTeacher ucTeacher;
     }
 }

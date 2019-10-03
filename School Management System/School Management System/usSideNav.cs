@@ -27,8 +27,8 @@ namespace School_Management_System
         private void btnAdmission_Click(object sender, EventArgs e)
         {
             Cache.activeUC.Hide();
-            Cache.ucStudent.Show();
-            Cache.activeUC = Cache.ucStudent;
+            Cache.ucTeacher.Show();
+            Cache.activeUC = Cache.ucTeacher;
             
         }
 
