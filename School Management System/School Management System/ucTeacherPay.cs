@@ -25,7 +25,7 @@ namespace School_Management_System
 
         private void show()
         {
-            ucTeacherPayBindingSource.DataSource = getTeachers();
+            teacherBindingSource.DataSource = getTeachers();
         }
 
         private List<Teacher> getTeachers()
