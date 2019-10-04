@@ -33,6 +33,7 @@
             this.ucStudents1 = new School_Management_System.ucStudents();
             this.usSideNav1 = new School_Management_System.usSideNav();
             this.ucTeacher1 = new School_Management_System.ucTeacher();
+            this.ucTeacherPay1 = new School_Management_System.ucTeacherPay();
             this.SuspendLayout();
             // 
             // ucUsers2
@@ -68,16 +69,24 @@
             // 
             // ucTeacher1
             // 
-            this.ucTeacher1.Location = new System.Drawing.Point(206, 34);
+            this.ucTeacher1.Location = new System.Drawing.Point(176, 17);
             this.ucTeacher1.Name = "ucTeacher1";
             this.ucTeacher1.Size = new System.Drawing.Size(717, 408);
             this.ucTeacher1.TabIndex = 6;
+            // 
+            // ucTeacherPay1
+            // 
+            this.ucTeacherPay1.Location = new System.Drawing.Point(176, 17);
+            this.ucTeacherPay1.Name = "ucTeacherPay1";
+            this.ucTeacherPay1.Size = new System.Drawing.Size(717, 408);
+            this.ucTeacherPay1.TabIndex = 7;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1033, 437);
+            this.Controls.Add(this.ucTeacherPay1);
             this.Controls.Add(this.ucTeacher1);
             this.Controls.Add(this.ucUsers2);
             this.Controls.Add(this.ucHome1);
@@ -97,5 +106,6 @@
         private ucHome ucHome1;
         private ucUsers ucUsers2;
         private ucTeacher ucTeacher1;
+        private ucTeacherPay ucTeacherPay1;
     }
 }

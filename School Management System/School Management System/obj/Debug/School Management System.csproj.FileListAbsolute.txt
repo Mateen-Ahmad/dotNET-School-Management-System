@@ -30,3 +30,21 @@ C:\Users\Haseeb virk\Documents\GitHub\School_Management_System\School Management
 C:\Users\Haseeb virk\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School_Management_System.ucStudents.resources
 C:\Users\Haseeb virk\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School_Management_System.ucHome.resources
 C:\Users\Haseeb virk\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School_Management_System.ucTeacher.resources
+C:\Users\92305\Documents\GitHub\School_Management_System\School Management System\School Management System\bin\Debug\School Management System.exe.config
+C:\Users\92305\Documents\GitHub\School_Management_System\School Management System\School Management System\bin\Debug\School Management System.exe
+C:\Users\92305\Documents\GitHub\School_Management_System\School Management System\School Management System\bin\Debug\School Management System.pdb
+C:\Users\92305\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School_Management_System.frmLogin.resources
+C:\Users\92305\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School_Management_System.frmMain.resources
+C:\Users\92305\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School_Management_System.frmMateen.resources
+C:\Users\92305\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School_Management_System.frmWelcome.resources
+C:\Users\92305\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School_Management_System.Properties.Resources.resources
+C:\Users\92305\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School_Management_System.ucHome.resources
+C:\Users\92305\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School_Management_System.ucStudents.resources
+C:\Users\92305\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School_Management_System.ucTeacher.resources
+C:\Users\92305\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School_Management_System.ucTeacherPay.resources
+C:\Users\92305\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School_Management_System.ucUsers.resources
+C:\Users\92305\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School_Management_System.usSideNav.resources
+C:\Users\92305\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School Management System.csproj.GenerateResource.cache
+C:\Users\92305\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School Management System.exe
+C:\Users\92305\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School Management System.pdb
+C:\Users\92305\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School Management System.csprojAssemblyReference.cache

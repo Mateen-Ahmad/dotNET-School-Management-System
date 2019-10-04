@@ -44,5 +44,12 @@ namespace School_Management_System
             Cache.activeUC = Cache.ucHome;
             
         }
+
+        private void btnPay_Click(object sender, EventArgs e)
+        {
+            Cache.activeUC.Hide();
+            Cache.ucTeacherPay.Show();
+            Cache.activeUC = Cache.ucTeacherPay;
+        }
     }
 }

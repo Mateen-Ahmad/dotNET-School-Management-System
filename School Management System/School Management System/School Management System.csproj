@@ -95,6 +95,12 @@
     <Compile Include="ucTeacher.Designer.cs">
       <DependentUpon>ucTeacher.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucTeacherPay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucTeacherPay.Designer.cs">
+      <DependentUpon>ucTeacherPay.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucUsers.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -138,6 +144,9 @@
     <EmbeddedResource Include="ucTeacher.resx">
       <DependentUpon>ucTeacher.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ucTeacherPay.resx">
+      <DependentUpon>ucTeacherPay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucUsers.resx">
       <DependentUpon>ucUsers.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,6 +155,7 @@
     </EmbeddedResource>
     <None Include="Properties\DataSources\Student.datasource" />
     <None Include="Properties\DataSources\Teacher.datasource" />
+    <None Include="Properties\DataSources\ucTeacherPay.datasource" />
     <None Include="Properties\DataSources\User.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

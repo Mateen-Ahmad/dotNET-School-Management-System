@@ -37,6 +37,8 @@ namespace School_Management_System
             Cache.ucTeacher.Hide();
             Cache.ucStudent = ucStudents1;
             Cache.ucStudent.Hide();
+            Cache.ucTeacherPay = ucTeacherPay1;
+            Cache.ucTeacherPay.Hide();
         }
 
         private void ucUsers1_Load_1(object sender, EventArgs e)
