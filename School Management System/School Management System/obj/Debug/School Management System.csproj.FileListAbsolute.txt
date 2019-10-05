@@ -47,7 +47,6 @@ C:\Users\92305\Documents\GitHub\School_Management_System\School Management Syste
 C:\Users\92305\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School Management System.csproj.GenerateResource.cache
 C:\Users\92305\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School Management System.exe
 C:\Users\92305\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School Management System.pdb
-C:\Users\92305\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School Management System.csprojAssemblyReference.cache
 C:\Users\hamma\Documents\GitHub\School_Management_System\School Management System\School Management System\bin\Debug\School Management System.exe.config
 C:\Users\hamma\Documents\GitHub\School_Management_System\School Management System\School Management System\bin\Debug\School Management System.exe
 C:\Users\hamma\Documents\GitHub\School_Management_System\School Management System\School Management System\bin\Debug\School Management System.pdb
@@ -67,3 +66,5 @@ C:\Users\hamma\Documents\GitHub\School_Management_System\School Management Syste
 C:\Users\hamma\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School Management System.csproj.CoreCompileInputs.cache
 C:\Users\hamma\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School Management System.exe
 C:\Users\hamma\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School Management System.pdb
+C:\Users\92305\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School Management System.csprojAssemblyReference.cache
+C:\Users\92305\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School_Management_System.ucPayCalculate.resources

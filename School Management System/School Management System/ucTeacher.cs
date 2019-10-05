@@ -98,7 +98,11 @@ namespace School_Management_System
 
         private void dgvTeachers_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.ColumnIndex == 4)
+            {
+                MessageBox.Show("Talha");
 
+            }
         }
     }
 }
