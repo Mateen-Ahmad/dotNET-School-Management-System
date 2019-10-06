@@ -20,15 +20,15 @@ namespace School_Management_System
         private void btnAdmin_Click(object sender, EventArgs e)
         {
             Cache.activeUC.Hide();
-            Cache.ucUsers.Show();
-            Cache.activeUC = Cache.ucUsers;
+            Cache.ucSubject.Show();
+            Cache.activeUC = Cache.ucSubject;
         }
 
         private void btnAdmission_Click(object sender, EventArgs e)
         {
             Cache.activeUC.Hide();
             Cache.ucTeacher.Show();
-            Cache.activeUC = Cache.ucTeacher;
+            Cache.activeUC = Cache.ucClass;
             
         }
 

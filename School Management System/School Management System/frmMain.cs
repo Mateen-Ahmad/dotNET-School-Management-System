@@ -30,13 +30,17 @@ namespace School_Management_System
         private void frmMain_Load(object sender, EventArgs e)
         {
             Cache.ucHome=ucHome1;
-            Cache.activeUC = ucHome1;
+            Cache.ucHome.Hide();
             Cache.ucUsers = ucUsers2;
             Cache.ucUsers.Hide();
             Cache.ucTeacher = ucTeacher1;
             Cache.ucTeacher.Hide();
             Cache.ucStudent = ucStudents1;
             Cache.ucStudent.Hide();
+            Cache.ucClass = ucClass1;
+            Cache.ucClass.Hide();
+            Cache.ucSubject = ucSubject1;
+            Cache.activeUC = ucSubject1;
         }
 
         private void ucUsers1_Load_1(object sender, EventArgs e)
@@ -50,6 +54,11 @@ namespace School_Management_System
         }
 
         private void ucStudents1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ucClass1_Load(object sender, EventArgs e)
         {
 
         }

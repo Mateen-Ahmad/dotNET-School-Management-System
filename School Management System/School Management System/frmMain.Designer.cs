@@ -28,12 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.ucClass1 = new School_Management_System.ucClass();
+            this.ucTeacher1 = new School_Management_System.ucTeacher();
             this.ucUsers2 = new School_Management_System.ucUsers();
             this.ucHome1 = new School_Management_System.ucHome();
             this.ucStudents1 = new School_Management_System.ucStudents();
             this.usSideNav1 = new School_Management_System.usSideNav();
-            this.ucTeacher1 = new School_Management_System.ucTeacher();
+            this.ucSubject1 = new School_Management_System.ucSubject();
             this.SuspendLayout();
+            // 
+            // ucClass1
+            // 
+            this.ucClass1.Location = new System.Drawing.Point(190, 37);
+            this.ucClass1.Name = "ucClass1";
+            this.ucClass1.Size = new System.Drawing.Size(818, 377);
+            this.ucClass1.TabIndex = 7;
+            this.ucClass1.Load += new System.EventHandler(this.ucClass1_Load);
+            // 
+            // ucTeacher1
+            // 
+            this.ucTeacher1.Location = new System.Drawing.Point(206, 34);
+            this.ucTeacher1.Name = "ucTeacher1";
+            this.ucTeacher1.Size = new System.Drawing.Size(717, 408);
+            this.ucTeacher1.TabIndex = 6;
             // 
             // ucUsers2
             // 
@@ -66,18 +83,20 @@
             this.usSideNav1.TabIndex = 0;
             this.usSideNav1.Load += new System.EventHandler(this.usSideNav1_Load);
             // 
-            // ucTeacher1
+            // ucSubject1
             // 
-            this.ucTeacher1.Location = new System.Drawing.Point(206, 34);
-            this.ucTeacher1.Name = "ucTeacher1";
-            this.ucTeacher1.Size = new System.Drawing.Size(717, 408);
-            this.ucTeacher1.TabIndex = 6;
+            this.ucSubject1.Location = new System.Drawing.Point(174, 34);
+            this.ucSubject1.Name = "ucSubject1";
+            this.ucSubject1.Size = new System.Drawing.Size(954, 408);
+            this.ucSubject1.TabIndex = 8;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1033, 437);
+            this.ClientSize = new System.Drawing.Size(1033, 457);
+            this.Controls.Add(this.ucSubject1);
+            this.Controls.Add(this.ucClass1);
             this.Controls.Add(this.ucTeacher1);
             this.Controls.Add(this.ucUsers2);
             this.Controls.Add(this.ucHome1);
@@ -97,5 +116,7 @@
         private ucHome ucHome1;
         private ucUsers ucUsers2;
         private ucTeacher ucTeacher1;
+        private ucClass ucClass1;
+        private ucSubject ucSubject1;
     }
 }

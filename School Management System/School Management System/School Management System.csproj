@@ -76,7 +76,14 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Student.cs" />
+    <Compile Include="Subject.cs" />
     <Compile Include="Teacher.cs" />
+    <Compile Include="ucClass.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucClass.Designer.cs">
+      <DependentUpon>ucClass.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucHome.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -88,6 +95,12 @@
     </Compile>
     <Compile Include="ucStudents.designer.cs">
       <DependentUpon>ucStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucSubject.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucSubject.Designer.cs">
+      <DependentUpon>ucSubject.cs</DependentUpon>
     </Compile>
     <Compile Include="ucTeacher.cs">
       <SubType>UserControl</SubType>
@@ -129,11 +142,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ucClass.resx">
+      <DependentUpon>ucClass.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucHome.resx">
       <DependentUpon>ucHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucStudents.resx">
       <DependentUpon>ucStudents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucSubject.resx">
+      <DependentUpon>ucSubject.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucTeacher.resx">
       <DependentUpon>ucTeacher.cs</DependentUpon>
@@ -144,7 +163,9 @@
     <EmbeddedResource Include="usSideNav.resx">
       <DependentUpon>usSideNav.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\Class.datasource" />
     <None Include="Properties\DataSources\Student.datasource" />
+    <None Include="Properties\DataSources\Subject.datasource" />
     <None Include="Properties\DataSources\Teacher.datasource" />
     <None Include="Properties\DataSources\User.datasource" />
     <None Include="Properties\Settings.settings">
