@@ -13,6 +13,8 @@ namespace School_Management_System
 {
     public partial class ucTeacher : UserControl
     {
+        bool newTeacher = false;
+        string teacherName;
         public ucTeacher()
         {
             InitializeComponent();
@@ -30,15 +32,17 @@ namespace School_Management_System
 
         private void ucTeacher_Load(object sender, EventArgs e)
         {
+            lblName.Hide();
+            lblPay.Hide();
+            txtName.Hide();
+            txtPay.Hide();
+            btnDone.Hide();
             show();
         }
 
         private void show()
         {
-            lblName.Hide();
-            lblPay.Hide();
-            txtName.Hide();
-            txtPay.Hide();
+           
             teacherBindingSource.DataSource = getTeacher();
         }
 
@@ -46,6 +50,11 @@ namespace School_Management_System
         {
             if(this.Visible)
             {
+                lblName.Hide();
+                lblPay.Hide();
+                txtName.Hide();
+                txtPay.Hide();
+                btnDone.Hide();
                 show();
 
             }
@@ -57,7 +66,8 @@ namespace School_Management_System
             lblPay.Show();
             txtName.Show();
             txtPay.Show();
-          
+            btnDone.Show();
+            newTeacher = true;
 
         }
         private List<Teacher> getTeacher()
@@ -81,15 +91,45 @@ namespace School_Management_System
 
         private void btnDone_Click(object sender, EventArgs e)
         {
-            addTeacher();
-            teacherBindingSource.DataSource = getTeacher();
+            if (string.IsNullOrEmpty(txtName.Text) || string.IsNullOrEmpty(txtPay.Text))
+            {
+                MessageBox.Show("TexBoxes mus be Non Empty");
+            }
+            else if(Valid(txtName.Text))
+            {
+                Teacher teacher = new Teacher();
+                teacher.Name = txtName.Text;
+                teacher.Pay = Convert.ToInt32(txtPay.Text);
+                if (newTeacher)
+                {
+                    addTeacher(teacher);
+                    teacherBindingSource.DataSource = getTeacher();
+                    show();
+                }
+                else
+                {
+                    updateTeacher(teacher);
+                    show();
+                }
+                txtName.Text = "";
+                txtPay.Text = "";
+                txtName.Hide();
+                txtPay.Hide();
+                lblName.Hide();
+                lblPay.Hide();
+                btnDone.Hide();
+            }
+            else
+            {
+                MessageBox.Show("This name is already exist");
+            }
             
         }
-        public void addTeacher()
+        private void addTeacher(Teacher teacher)
         {
             SqlConnection connection = new SqlConnection(Cache.connection);
             connection.Open();
-            string query = "insert into tbTeacher (name,pay) values('" + txtName.Text.ToString() + "','" + Convert.ToInt32(txtPay.Text)+ "')";
+            string query = "insert into tbTeacher (name,pay) values('" + teacher.Name + "','" + teacher.Pay+ "')";
             SqlCommand cmd = new SqlCommand(query, connection);
             cmd.ExecuteNonQuery();
             connection.Close();
@@ -98,7 +138,58 @@ namespace School_Management_System
 
         private void dgvTeachers_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            
+            if(e.ColumnIndex==2)
+            {
+                teacherName = dgvTeachers.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtName.Text = teacherName;
+                txtPay.Text = dgvTeachers.Rows[e.RowIndex].Cells[1].Value.ToString();
+                lblName.Show();
+                lblPay.Show();
+                txtName.Show();
+                txtPay.Show();
+                btnDone.Show();
+            }
+            else if(e.ColumnIndex==3)
+            {
+                teacherName = dgvTeachers.Rows[e.RowIndex].Cells[0].Value.ToString();
+                deleteTeacher(teacherName);
+                show();
+            }
+        }
+        private void updateTeacher(Teacher teacher)
+        {
+            SqlConnection connection = new SqlConnection(Cache.connection);
+            connection.Open();
+            string query = "update tbTeacher set name= '" + teacher.Name + "', pay ='" + teacher.Pay + "' where name= '" + teacherName + "'";
+            SqlCommand cmd = new SqlCommand(query, connection);
+            cmd.ExecuteNonQuery();
+            connection.Close();
+        }
+        private void deleteTeacher(string teacher)
+        {
+            SqlConnection connection = new SqlConnection(Cache.connection);
+            connection.Open();
+            string query = "delete from tbTeacher where name ='" + teacher + "'";
+            SqlCommand cmd = new SqlCommand(query, connection);
+            cmd.ExecuteNonQuery();
+            connection.Close();
+        }
+        private bool Valid(string name)
+        {
+            SqlConnection connection = new SqlConnection(Cache.connection);
+            connection.Open();
+            string query = "select count (*) from tbTeacher where name= '" + name + "'";
+            SqlCommand cmd = new SqlCommand(query, connection);
+            var count = cmd.ExecuteScalar();
+            if(Convert.ToInt32(count)==0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

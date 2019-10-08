@@ -20,25 +20,37 @@ namespace School_Management_System
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            User user = new User();
-            user.UserName = txtUserName.Text;
-            user.Password = txtPassword.Text;
-            bool login;
-            // This is to be moved to wcf
-            if(Cache.isAdmin)
+            if(string.IsNullOrEmpty(txtUserName.Text) || string.IsNullOrEmpty(txtPassword.Text))
             {
-                login = loginAdmin(user);
+                MessageBox.Show("TextBoxes must be NonEmpty");
             }
             else
             {
-                login = loginUser(user);
+                User user = new User();
+                user.UserName = txtUserName.Text;
+                user.Password = txtPassword.Text;
+                bool login;
+                // This is to be moved to wcf
+                if (Cache.isAdmin)
+                {
+                    login = loginAdmin(user);
+                }
+                else
+                {
+                    login = loginUser(user);
+                }
+                // 
+                if (login)
+                {
+                    ActiveForm.Close();
+                    (new frmMain()).Show();
+                }
+                else
+                {
+                    MessageBox.Show("Your Input is Invalid");
+                }
             }
-            // 
-            if(login)
-            {
-                ActiveForm.Close();
-                (new frmMain()).Show();
-            }
+            
         }
         bool loginAdmin(User user)
         {
@@ -61,6 +73,11 @@ namespace School_Management_System
                 return false;
             }
             return true;
+        }
+
+        private void txtUserName_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
