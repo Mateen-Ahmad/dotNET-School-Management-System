@@ -117,25 +117,38 @@ namespace School_Management_System
 
         private void btnDone_Click(object sender, EventArgs e)
         {
-            Subject subject = new Subject();
-            subject.Name = txtSubject.Text;
-            subject.TotalMarks = Convert.ToInt32(txtMarks.Text);
-            if(edit)
+            if(ValidateChildren())
             {
-                updateSubject(subject, oldName, selectedClassIndex);
-            }
-            else
-            {
-                addSubject(subject, selectedClassIndex);
-            }
+                bool flag;
+                Subject subject = new Subject();
+                subject.Name = txtSubject.Text;
+                subject.TotalMarks = Convert.ToInt32(txtMarks.Text);
+                if (edit)
+                {
+                    updateSubject(subject, oldName, selectedClassIndex);
+                }
+                else
+                {
+                    flag = addSubject(subject, selectedClassIndex);
+                    if (flag)
+                    {
+                        MessageBox.Show("Subject is Added");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Subject is Already Exist");
+                    }
+                }
 
-            lblMarks.Hide();
-            lblSubject.Hide();
-            txtMarks.Hide();
-            txtSubject.Hide();
-            btnDone.Hide();
-            btnAddSubject.Show();
-            show();
+                lblMarks.Hide();
+                lblSubject.Hide();
+                txtMarks.Hide();
+                txtSubject.Hide();
+                btnDone.Hide();
+                btnAddSubject.Show();
+                show();
+            }
+            
         }
         void updateSubject(Subject subject, string oldName, int classIndex)
         {
@@ -146,15 +159,25 @@ namespace School_Management_System
             cmd.ExecuteNonQuery();
             connection.Close();
         }
-        void addSubject(Subject subject, int classIndex)
+        bool addSubject(Subject subject, int classIndex)
         {
+
             List<Subject> subjects = new List<Subject>();
             var connection = new SqlConnection(Cache.connection);
             connection.Open();
-            string query = "insert into tbSubject (name,totalMarks,classIndex) values ('" + subject.Name + "' , '" + subject.TotalMarks + "', '" + classIndex + "')";
+            string query = "select count (*) from tbSubject where name ='" + subject.Name + "'";
             var cmd = new SqlCommand(query, connection);
-            cmd.ExecuteNonQuery();
-            connection.Close();
+            var count = cmd.ExecuteScalar();
+            if(Convert.ToInt32(count)==0)
+            {
+                query = "insert into tbSubject (name,totalMarks,classIndex) values ('" + subject.Name + "' , '" + subject.TotalMarks + "', '" + classIndex + "')";
+                cmd = new SqlCommand(query, connection);
+                cmd.ExecuteNonQuery();
+                connection.Close();
+                return true;
+            }
+            return false;
+            
         }
 
         private void dgvSubjects_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -186,6 +209,32 @@ namespace School_Management_System
             var cmd = new SqlCommand(query, connection);
             cmd.ExecuteNonQuery();
             connection.Close();
+        }
+
+        private void txtSubject_Validating(object sender, CancelEventArgs e)
+        {
+            if(string.IsNullOrWhiteSpace(txtSubject.Text))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtSubject, "Please Enter Subject");
+            }
+            else
+            {
+                errorProvider1.SetError(txtSubject, null);
+            }
+        }
+
+        private void txtMarks_Validating(object sender, CancelEventArgs e)
+        {
+            if(string.IsNullOrWhiteSpace(txtMarks.Text))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtMarks, "Please Enter Marks");
+            }
+            else
+            {
+                errorProvider1.SetError(txtMarks, null);
+            }
         }
     }
 }

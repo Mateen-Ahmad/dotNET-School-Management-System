@@ -60,10 +60,14 @@ namespace School_Management_System
 
         private void btnDone_Click(object sender, EventArgs e)
         {
-            string month = txtMonth.Text;
-            DateTime dateTime = DateTime.UtcNow.Date;
-            addTeacherPay(this.index, month, this.totalPay, false, dateTime);
-            this.Hide();
+            if(ValidateChildren())
+            {
+                string month = txtMonth.Text;
+                DateTime dateTime = DateTime.UtcNow.Date;
+                addTeacherPay(this.index, month, this.totalPay, false, dateTime);
+                this.Hide();
+            }
+           
         }
 
         private void addTeacherPay(int index, string month, int pay, bool recived, DateTime date)
@@ -74,6 +78,37 @@ namespace School_Management_System
             var cmd = new SqlCommand(query, connection);
             cmd.ExecuteNonQuery();
             connection.Close();
+        }
+
+        private void txtAdvance_Validating(object sender, CancelEventArgs e)
+        {
+            if(string.IsNullOrWhiteSpace(txtAdvance.Text))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtAdvance, "Please Enter Advance amount");
+            }
+            else
+            {
+                errorProvider1.SetError(txtAdvance, null);
+            }
+        }
+
+        private void txtAttendance_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtAttendance_Validating(object sender, CancelEventArgs e)
+        {
+            if(string.IsNullOrWhiteSpace(txtAttendance.Text))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtAttendance, "Please Enter Attendence");
+            }
+            else
+            {
+                errorProvider1.SetError(txtAttendance, null);
+            }
         }
     }
 }

@@ -43,8 +43,10 @@
             this.lblMarks = new System.Windows.Forms.Label();
             this.txtMarks = new System.Windows.Forms.TextBox();
             this.btnDone = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubjects)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.subjectBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // cbClass
@@ -72,6 +74,7 @@
             this.txtSubject.Name = "txtSubject";
             this.txtSubject.Size = new System.Drawing.Size(100, 20);
             this.txtSubject.TabIndex = 2;
+            this.txtSubject.Validating += new System.ComponentModel.CancelEventHandler(this.txtSubject_Validating);
             // 
             // dgvSubjects
             // 
@@ -161,6 +164,7 @@
             this.txtMarks.Name = "txtMarks";
             this.txtMarks.Size = new System.Drawing.Size(100, 20);
             this.txtMarks.TabIndex = 7;
+            this.txtMarks.Validating += new System.ComponentModel.CancelEventHandler(this.txtMarks_Validating);
             // 
             // btnDone
             // 
@@ -171,6 +175,10 @@
             this.btnDone.Text = "Done";
             this.btnDone.UseVisualStyleBackColor = true;
             this.btnDone.Click += new System.EventHandler(this.btnDone_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // ucSubject
             // 
@@ -191,6 +199,7 @@
             this.VisibleChanged += new System.EventHandler(this.ucSubject_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubjects)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.subjectBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,5 +221,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn totalMarksDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewButtonColumn Column1;
         private System.Windows.Forms.DataGridViewButtonColumn Column2;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

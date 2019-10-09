@@ -91,38 +91,38 @@ namespace School_Management_System
 
         private void btnDone_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtName.Text) || string.IsNullOrEmpty(txtPay.Text))
+            if(ValidateChildren())
             {
-                MessageBox.Show("TexBoxes mus be Non Empty");
-            }
-            else if(Valid(txtName.Text))
-            {
-                Teacher teacher = new Teacher();
-                teacher.Name = txtName.Text;
-                teacher.Pay = Convert.ToInt32(txtPay.Text);
-                if (newTeacher)
+                if (Valid(txtName.Text))
                 {
-                    addTeacher(teacher);
-                    teacherBindingSource.DataSource = getTeacher();
-                    show();
+                    Teacher teacher = new Teacher();
+                    teacher.Name = txtName.Text;
+                    teacher.Pay = Convert.ToInt32(txtPay.Text);
+                    if (newTeacher)
+                    {
+                        addTeacher(teacher);
+                        teacherBindingSource.DataSource = getTeacher();
+                        show();
+                    }
+                    else
+                    {
+                        updateTeacher(teacher);
+                        show();
+                    }
+                    txtName.Text = "";
+                    txtPay.Text = "";
+                    txtName.Hide();
+                    txtPay.Hide();
+                    lblName.Hide();
+                    lblPay.Hide();
+                    btnDone.Hide();
                 }
                 else
                 {
-                    updateTeacher(teacher);
-                    show();
+                    MessageBox.Show("This name is already exist");
                 }
-                txtName.Text = "";
-                txtPay.Text = "";
-                txtName.Hide();
-                txtPay.Hide();
-                lblName.Hide();
-                lblPay.Hide();
-                btnDone.Hide();
             }
-            else
-            {
-                MessageBox.Show("This name is already exist");
-            }
+            
             
         }
         private void addTeacher(Teacher teacher)
@@ -189,6 +189,32 @@ namespace School_Management_System
             else
             {
                 return false;
+            }
+        }
+
+        private void txtName_Validating(object sender, CancelEventArgs e)
+        {
+            if(string.IsNullOrWhiteSpace(txtName.Text))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtName, "Please Enter Name");
+            }
+            else
+            {
+                errorProvider1.SetError(txtName, null);
+            }
+        }
+
+        private void txtPay_Validating(object sender, CancelEventArgs e)
+        {
+            if(string.IsNullOrWhiteSpace(txtPay.Text))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtPay, "Please Enter Pay");
+            }
+            else
+            {
+                errorProvider1.SetError(txtPay, null);
             }
         }
     }

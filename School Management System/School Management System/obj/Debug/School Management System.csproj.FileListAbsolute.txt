@@ -53,3 +53,8 @@ C:\Users\hamma\Documents\GitHub\School_Management_System\School Management Syste
 C:\Users\hamma\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School_Management_System.ucPayCalculate.resources
 C:\Users\hamma\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School_Management_System.ucTeacherPay.resources
 C:\Users\hamma\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School_Management_System.ucAdmin.resources
+C:\Users\Haseeb virk\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School_Management_System.ucAdmin.resources
+C:\Users\Haseeb virk\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School_Management_System.ucClass.resources
+C:\Users\Haseeb virk\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School_Management_System.ucPayCalculate.resources
+C:\Users\Haseeb virk\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School_Management_System.ucSubject.resources
+C:\Users\Haseeb virk\Documents\GitHub\School_Management_System\School Management System\School Management System\obj\Debug\School_Management_System.ucTeacherPay.resources

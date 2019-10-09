@@ -21,19 +21,19 @@ namespace School_Management_System
         }
         private void ucStudents_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void load()
         {
             show();
-            lblRollNumber.Hide();
+
             lblName.Hide();
             lblFatherName.Hide();
             lblPhoneNumber.Hide();
             lblEmail.Hide();
             lblClass.Hide();
-            txtRollNumber.Hide();
+
             txtName.Hide();
             txtFatherName.Hide();
             txtPhoneNumber.Hide();
@@ -45,13 +45,13 @@ namespace School_Management_System
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            lblRollNumber.Show();
+
             lblName.Show();
             lblFatherName.Show();
             lblPhoneNumber.Show();
             lblEmail.Show();
             lblClass.Show();
-            txtRollNumber.Show();
+
             txtName.Show();
             txtFatherName.Show();
             txtPhoneNumber.Show();
@@ -126,19 +126,18 @@ namespace School_Management_System
             rollno = dgvStudent.Rows[e.RowIndex].Cells[0].Value.ToString();
             if (e.ColumnIndex == 8)
             {
-                txtRollNumber.Text = rollno;
+
                 txtName.Text = dgvStudent.Rows[e.RowIndex].Cells[1].Value.ToString();
                 txtFatherName.Text = dgvStudent.Rows[e.RowIndex].Cells[2].Value.ToString();
                 txtPhoneNumber.Text = dgvStudent.Rows[e.RowIndex].Cells[3].Value.ToString();
                 txtEmail.Text = dgvStudent.Rows[e.RowIndex].Cells[4].Value.ToString();
                 cmbClass.Text = dgvStudent.Rows[e.RowIndex].Cells[5].Value.ToString();
-                lblRollNumber.Show();
                 lblName.Show();
                 lblFatherName.Show();
                 lblPhoneNumber.Show();
                 lblEmail.Show();
                 lblClass.Show();
-                txtRollNumber.Show();
+
                 txtName.Show();
                 txtFatherName.Show();
                 txtPhoneNumber.Show();
@@ -157,46 +156,52 @@ namespace School_Management_System
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            Student student = new Student();
-            student.RollNumber = txtRollNumber.Text;
-            student.Name = txtName.Text;
-            student.FatherName = txtFatherName.Text;
-            student.PhoneNumber = txtPhoneNumber.Text;
-            student.Email = txtEmail.Text;
-            student.Class1 = cmbClass.SelectedItem.ToString();
-            student.CreatedBy = "Mateen";
-            student.CreatedDate = DateTime.Today.ToShortDateString();
-            if (isNewStudent)
+            if(ValidateChildren())
             {
-                addStudent(student);
-            }
-            else
-            {
-                updateStudent(rollno, student);
-            }
-            txtRollNumber.Text = "";
-            txtName.Text = "";
-            txtFatherName.Text = "";
-            txtPhoneNumber.Text = "";
-            txtEmail.Text = "";
-            cmbClass.SelectedItem = null;
+                Cache.rollNumber = 0;
+                Student student = new Student();
+                student.RollNumber = Convert.ToString(cmbClass.SelectedItem + " _" + Cache.rollNumber);
+                student.Name = txtName.Text;
+                student.FatherName = txtFatherName.Text;
+                student.PhoneNumber = txtPhoneNumber.Text;
+                student.Email = txtEmail.Text;
+                student.Class1 = cmbClass.SelectedItem.ToString();
+                student.CreatedBy = "Mateen";
+                student.CreatedDate = DateTime.Today.ToShortDateString();
+                if (isNewStudent)
+                {
+                    addStudent(student);
+                    Cache.rollNumber++;
+                }
+                else
+                {
+                    updateStudent(rollno, student);
+                }
 
-            lblRollNumber.Hide();
-            lblName.Hide();
-            lblFatherName.Hide();
-            lblPhoneNumber.Hide();
-            lblEmail.Hide();
-            lblClass.Hide();
-            txtRollNumber.Hide();
-            txtName.Hide();
-            txtFatherName.Hide();
-            txtPhoneNumber.Hide();
-            txtEmail.Hide();
-            cmbClass.Hide();
-            btnSave.Hide();
-            btnAdd.Show();
+                txtName.Text = "";
+                txtFatherName.Text = "";
+                txtPhoneNumber.Text = "";
+                txtEmail.Text = "";
+                cmbClass.SelectedItem = null;
 
-            show();
+
+                lblName.Hide();
+                lblFatherName.Hide();
+                lblPhoneNumber.Hide();
+                lblEmail.Hide();
+                lblClass.Hide();
+
+                txtName.Hide();
+                txtFatherName.Hide();
+                txtPhoneNumber.Hide();
+                txtEmail.Hide();
+                cmbClass.Hide();
+                btnSave.Hide();
+                btnAdd.Show();
+
+                show();
+            }
+           
         }
 
         private void ucStudents_VisibleChanged(object sender, EventArgs e)
@@ -206,5 +211,67 @@ namespace School_Management_System
                 load();
             }
         }
+
+        private void txtName_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtName.Text))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtName, "Please Enter Yor Name");
+            }
+            else
+            {
+                errorProvider1.SetError(txtName, null);
+            }
+        }
+
+        private void txtFatherName_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtFatherName.Text))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtFatherName, "Please Enter Yor Name");
+            }
+            else
+            {
+                errorProvider1.SetError(txtFatherName, null);
+            }
+        }
+
+        private void txtPhoneNumber_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void txtPhoneNumber_Validating(object sender, CancelEventArgs e)
+        {
+
+            if (string.IsNullOrWhiteSpace(txtPhoneNumber.Text))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtPhoneNumber, "Please Enter Yor Name");
+            }
+            else
+            {
+                errorProvider1.SetError(txtPhoneNumber, null);
+
+            }
+        }
+
+        private void txtEmail_Validating(object sender, CancelEventArgs e)
+        {
+
+            if (string.IsNullOrWhiteSpace(txtEmail.Text))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtEmail, "Please Enter Yor Name");
+            }
+            else
+            {
+                errorProvider1.SetError(txtEmail, null);
+
+            }
+        }
     }
 }
+    
+       

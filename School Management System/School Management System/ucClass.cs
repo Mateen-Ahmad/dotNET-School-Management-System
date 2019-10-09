@@ -68,6 +68,7 @@ namespace School_Management_System
 
         private void btnDone_Click(object sender, EventArgs e)
         {
+            bool flag;
             Class c = new Class();
             c.ClassName = txtClassName.Text;
             if(edit)
@@ -76,7 +77,15 @@ namespace School_Management_System
             }
             else
             {
-                addClass(c);
+                flag=addClass(c);
+                if(flag)
+                {
+                    MessageBox.Show("Class is Added");
+                }
+                else
+                {
+                    MessageBox.Show("Class is Already Exist");
+                }
             }
             lblClassName.Hide();
             txtClassName.Hide();
@@ -93,14 +102,23 @@ namespace School_Management_System
             cmd.ExecuteNonQuery();
             connection.Close();
         }
-        void addClass(Class c)
+        bool addClass(Class c)
         {
             var connection = new SqlConnection(Cache.connection);
             connection.Open();
-            string query = "insert into tbClass (class) values ('" + c.ClassName + "')";
+            string query = "select count (*) from tbClass where (class) ='" + c.ClassName + "'";
             var cmd = new SqlCommand(query, connection);
-            cmd.ExecuteNonQuery();
-            connection.Close();
+            var count = cmd.ExecuteScalar();
+            if(Convert.ToInt32(count)==0)
+            {
+                query = "insert into tbClass (class) values ('" + c.ClassName + "')";
+               cmd = new SqlCommand(query, connection);
+                cmd.ExecuteNonQuery();
+                connection.Close();
+                return true;
+            }
+            return false;
+            
             
         }
 

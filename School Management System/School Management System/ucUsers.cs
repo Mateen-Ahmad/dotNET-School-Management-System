@@ -71,35 +71,58 @@ namespace School_Management_System
 
         private void btnDone_Click(object sender, EventArgs e)
         {
-            User user = new User();
-            user.UserName = txtUserName.Text;
-            user.Password = txtPassword.Text;
-            if(newUser)
+            if(ValidateChildren())
             {
-                addUser(user);
+                bool flag;
+                User user = new User();
+                user.UserName = txtUserName.Text;
+                user.Password = txtPassword.Text;
+                if (newUser)
+                {
+                    flag = addUser(user);
+                    if (flag)
+                    {
+                        MessageBox.Show("User is Add");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Already Exist");
+                    }
+                }
+                else
+                {
+                    updateUser(oldName, user);
+                }
+                txtPassword.Text = "";
+                txtUserName.Text = "";
+                show();
+                txtPassword.Hide();
+                txtUserName.Hide();
+                lblUserName.Hide();
+                lblPassword.Hide();
+                btnDone.Hide();
             }
-            else
-            {
-                updateUser(oldName,user);
-            }
-            txtPassword.Text = "";
-            txtUserName.Text = "";
-            show();
-            txtPassword.Hide();
-            txtUserName.Hide();
-            lblUserName.Hide();
-            lblPassword.Hide();
-            btnDone.Hide();
+           
         }
 
-        void addUser(User user)
+        bool addUser(User user)
         {
+
             var connection = new SqlConnection(Cache.connection);
             connection.Open();
-            string query = "insert into tbUser (userName,userPassword,createdDate) values ('" + user.UserName + "','" + user.Password + "' , '"+DateTime.Today.ToShortDateString()+"')";
+            string query = "select count (*) from tbUser where userPassword + '" + user.Password + "'";
             var cmd = new SqlCommand(query, connection);
-            cmd.ExecuteNonQuery();
-            connection.Close();
+            var count = cmd.ExecuteScalar();
+            if(Convert.ToInt32(count)==0)
+            {
+                query = "insert into tbUser (userName,userPassword,createdDate) values ('" + user.UserName + "','" + user.Password + "' , '" + DateTime.Today.ToShortDateString() + "')";
+                cmd = new SqlCommand(query, connection);
+                cmd.ExecuteNonQuery();
+                connection.Close();
+                return true;
+            }
+            return false;
+            
         }
         void updateUser(string oldName, User user)
         {
@@ -150,6 +173,32 @@ namespace School_Management_System
                 lblUserName.Hide();
                 lblPassword.Hide();
                 btnDone.Hide();
+            }
+        }
+
+        private void txtUserName_Validating(object sender, CancelEventArgs e)
+        {
+            if(string.IsNullOrWhiteSpace(txtUserName.Text))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtUserName, "Please Enter Name");
+            }
+            else
+            {
+                errorProvider1.SetError(txtUserName, null);
+            }
+        }
+
+        private void txtPassword_Validating(object sender, CancelEventArgs e)
+        {
+            if(string.IsNullOrWhiteSpace(txtPassword.Text))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtPassword, "Please Enter a Password");
+            }
+            else
+            {
+                errorProvider1.SetError(txtPassword, null);
             }
         }
     }

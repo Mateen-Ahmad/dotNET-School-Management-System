@@ -20,11 +20,7 @@ namespace School_Management_System
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrEmpty(txtUserName.Text) || string.IsNullOrEmpty(txtPassword.Text))
-            {
-                MessageBox.Show("TextBoxes must be NonEmpty");
-            }
-            else
+           if(ValidateChildren())
             {
                 User user = new User();
                 user.UserName = txtUserName.Text;
@@ -51,6 +47,8 @@ namespace School_Management_System
                 }
             }
             
+            
+            
         }
         bool loginAdmin(User user)
         {
@@ -76,6 +74,38 @@ namespace School_Management_System
         }
 
         private void txtUserName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUserName_Validating(object sender, CancelEventArgs e)
+        {
+            if(string.IsNullOrWhiteSpace(txtUserName.Text))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtUserName, "Please Enter your Name");
+            }
+            else
+            {
+                errorProvider1.SetError(txtUserName, null);
+            }
+        }
+
+        private void txtPassword_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtPassword.Text))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtPassword, "Please Enter your Name");
+            }
+            else
+            {
+                errorProvider1.SetError(txtPassword,null);
+            }
+            
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
         {
 
         }

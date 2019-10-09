@@ -9,6 +9,7 @@ namespace School_Management_System
 {
     class Cache
     {
+        public static int rollNumber;
         public static bool isAdmin;
         public static string connection = @"Data Source=localhost\sqlexpress;Initial Catalog=dbSMS;Integrated Security=True";
         public static UserControl activeUC;

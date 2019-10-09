@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtPay = new System.Windows.Forms.TextBox();
             this.lblPay = new System.Windows.Forms.Label();
             this.txtAdvance = new System.Windows.Forms.TextBox();
@@ -40,6 +41,8 @@
             this.lblCalculatePay = new System.Windows.Forms.Label();
             this.txtCalculatedPay = new System.Windows.Forms.TextBox();
             this.txtMonth = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtPay
@@ -65,6 +68,7 @@
             this.txtAdvance.Name = "txtAdvance";
             this.txtAdvance.Size = new System.Drawing.Size(237, 20);
             this.txtAdvance.TabIndex = 2;
+            this.txtAdvance.Validating += new System.ComponentModel.CancelEventHandler(this.txtAdvance_Validating);
             // 
             // lblAdvance
             // 
@@ -100,6 +104,8 @@
             this.txtAttendance.Name = "txtAttendance";
             this.txtAttendance.Size = new System.Drawing.Size(237, 20);
             this.txtAttendance.TabIndex = 7;
+            this.txtAttendance.TextChanged += new System.EventHandler(this.txtAttendance_TextChanged);
+            this.txtAttendance.Validating += new System.ComponentModel.CancelEventHandler(this.txtAttendance_Validating);
             // 
             // btnCalculate
             // 
@@ -146,6 +152,10 @@
             this.txtMonth.Size = new System.Drawing.Size(237, 20);
             this.txtMonth.TabIndex = 13;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // ucPayCalculate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -165,6 +175,7 @@
             this.Name = "ucPayCalculate";
             this.Size = new System.Drawing.Size(590, 268);
             this.Load += new System.EventHandler(this.ucPayCalculate_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -184,5 +195,6 @@
         private System.Windows.Forms.Label lblCalculatePay;
         private System.Windows.Forms.TextBox txtCalculatedPay;
         private System.Windows.Forms.TextBox txtMonth;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
