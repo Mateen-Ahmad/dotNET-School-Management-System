@@ -33,16 +33,16 @@
             this.btnAddSubject = new System.Windows.Forms.Button();
             this.txtSubject = new System.Windows.Forms.TextBox();
             this.dgvSubjects = new System.Windows.Forms.DataGridView();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalMarksDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.subjectBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblClass = new System.Windows.Forms.Label();
             this.lblSubject = new System.Windows.Forms.Label();
             this.lblMarks = new System.Windows.Forms.Label();
             this.txtMarks = new System.Windows.Forms.TextBox();
             this.btnDone = new System.Windows.Forms.Button();
-            this.subjectBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalMarksDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubjects)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.subjectBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -50,7 +50,7 @@
             // cbClass
             // 
             this.cbClass.FormattingEnabled = true;
-            this.cbClass.Location = new System.Drawing.Point(351, 33);
+            this.cbClass.Location = new System.Drawing.Point(177, 28);
             this.cbClass.Name = "cbClass";
             this.cbClass.Size = new System.Drawing.Size(121, 21);
             this.cbClass.TabIndex = 0;
@@ -58,7 +58,7 @@
             // 
             // btnAddSubject
             // 
-            this.btnAddSubject.Location = new System.Drawing.Point(374, 72);
+            this.btnAddSubject.Location = new System.Drawing.Point(200, 67);
             this.btnAddSubject.Name = "btnAddSubject";
             this.btnAddSubject.Size = new System.Drawing.Size(75, 23);
             this.btnAddSubject.TabIndex = 1;
@@ -68,7 +68,7 @@
             // 
             // txtSubject
             // 
-            this.txtSubject.Location = new System.Drawing.Point(307, 99);
+            this.txtSubject.Location = new System.Drawing.Point(133, 94);
             this.txtSubject.Name = "txtSubject";
             this.txtSubject.Size = new System.Drawing.Size(100, 20);
             this.txtSubject.TabIndex = 2;
@@ -85,60 +85,12 @@
             this.Column1,
             this.Column2});
             this.dgvSubjects.DataSource = this.subjectBindingSource;
-            this.dgvSubjects.Location = new System.Drawing.Point(199, 194);
+            this.dgvSubjects.Location = new System.Drawing.Point(25, 189);
             this.dgvSubjects.Name = "dgvSubjects";
             this.dgvSubjects.ReadOnly = true;
             this.dgvSubjects.Size = new System.Drawing.Size(448, 195);
             this.dgvSubjects.TabIndex = 4;
             this.dgvSubjects.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSubjects_CellContentClick);
-            // 
-            // lblClass
-            // 
-            this.lblClass.AutoSize = true;
-            this.lblClass.Location = new System.Drawing.Point(257, 41);
-            this.lblClass.Name = "lblClass";
-            this.lblClass.Size = new System.Drawing.Size(32, 13);
-            this.lblClass.TabIndex = 5;
-            this.lblClass.Text = "Class";
-            // 
-            // lblSubject
-            // 
-            this.lblSubject.AutoSize = true;
-            this.lblSubject.Location = new System.Drawing.Point(213, 102);
-            this.lblSubject.Name = "lblSubject";
-            this.lblSubject.Size = new System.Drawing.Size(74, 13);
-            this.lblSubject.TabIndex = 6;
-            this.lblSubject.Text = "Subject Name";
-            // 
-            // lblMarks
-            // 
-            this.lblMarks.AutoSize = true;
-            this.lblMarks.Location = new System.Drawing.Point(424, 102);
-            this.lblMarks.Name = "lblMarks";
-            this.lblMarks.Size = new System.Drawing.Size(63, 13);
-            this.lblMarks.TabIndex = 8;
-            this.lblMarks.Text = "Total Marks";
-            // 
-            // txtMarks
-            // 
-            this.txtMarks.Location = new System.Drawing.Point(518, 99);
-            this.txtMarks.Name = "txtMarks";
-            this.txtMarks.Size = new System.Drawing.Size(100, 20);
-            this.txtMarks.TabIndex = 7;
-            // 
-            // btnDone
-            // 
-            this.btnDone.Location = new System.Drawing.Point(374, 146);
-            this.btnDone.Name = "btnDone";
-            this.btnDone.Size = new System.Drawing.Size(75, 23);
-            this.btnDone.TabIndex = 9;
-            this.btnDone.Text = "Done";
-            this.btnDone.UseVisualStyleBackColor = true;
-            this.btnDone.Click += new System.EventHandler(this.btnDone_Click);
-            // 
-            // subjectBindingSource
-            // 
-            this.subjectBindingSource.DataSource = typeof(School_Management_System.Subject);
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -172,6 +124,54 @@
             this.Column2.Text = "Delete";
             this.Column2.UseColumnTextForButtonValue = true;
             // 
+            // subjectBindingSource
+            // 
+            this.subjectBindingSource.DataSource = typeof(School_Management_System.Subject);
+            // 
+            // lblClass
+            // 
+            this.lblClass.AutoSize = true;
+            this.lblClass.Location = new System.Drawing.Point(83, 36);
+            this.lblClass.Name = "lblClass";
+            this.lblClass.Size = new System.Drawing.Size(32, 13);
+            this.lblClass.TabIndex = 5;
+            this.lblClass.Text = "Class";
+            // 
+            // lblSubject
+            // 
+            this.lblSubject.AutoSize = true;
+            this.lblSubject.Location = new System.Drawing.Point(39, 97);
+            this.lblSubject.Name = "lblSubject";
+            this.lblSubject.Size = new System.Drawing.Size(74, 13);
+            this.lblSubject.TabIndex = 6;
+            this.lblSubject.Text = "Subject Name";
+            // 
+            // lblMarks
+            // 
+            this.lblMarks.AutoSize = true;
+            this.lblMarks.Location = new System.Drawing.Point(250, 97);
+            this.lblMarks.Name = "lblMarks";
+            this.lblMarks.Size = new System.Drawing.Size(63, 13);
+            this.lblMarks.TabIndex = 8;
+            this.lblMarks.Text = "Total Marks";
+            // 
+            // txtMarks
+            // 
+            this.txtMarks.Location = new System.Drawing.Point(344, 94);
+            this.txtMarks.Name = "txtMarks";
+            this.txtMarks.Size = new System.Drawing.Size(100, 20);
+            this.txtMarks.TabIndex = 7;
+            // 
+            // btnDone
+            // 
+            this.btnDone.Location = new System.Drawing.Point(200, 141);
+            this.btnDone.Name = "btnDone";
+            this.btnDone.Size = new System.Drawing.Size(75, 23);
+            this.btnDone.TabIndex = 9;
+            this.btnDone.Text = "Done";
+            this.btnDone.UseVisualStyleBackColor = true;
+            this.btnDone.Click += new System.EventHandler(this.btnDone_Click);
+            // 
             // ucSubject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -186,7 +186,7 @@
             this.Controls.Add(this.btnAddSubject);
             this.Controls.Add(this.cbClass);
             this.Name = "ucSubject";
-            this.Size = new System.Drawing.Size(954, 408);
+            this.Size = new System.Drawing.Size(542, 408);
             this.Load += new System.EventHandler(this.ucSubject_Load);
             this.VisibleChanged += new System.EventHandler(this.ucSubject_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubjects)).EndInit();

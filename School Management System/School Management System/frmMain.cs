@@ -31,12 +31,12 @@ namespace School_Management_System
         {
             Cache.ucHome=ucHome1;
             Cache.activeUC = ucHome1;
-            Cache.ucUsers = ucUsers2;
-            Cache.ucUsers.Hide();
-            Cache.ucTeacher = ucTeacher1;
-            Cache.ucTeacher.Hide();
             Cache.ucStudent = ucStudents1;
             Cache.ucStudent.Hide();
+            Cache.ucTeacherPay = ucTeacherPay1;
+            Cache.ucTeacherPay.Hide();
+            Cache.ucAdmin = ucAdmin1;
+            Cache.ucAdmin.Hide();
         }
 
         private void ucUsers1_Load_1(object sender, EventArgs e)

@@ -78,6 +78,12 @@
     <Compile Include="Student.cs" />
     <Compile Include="Subject.cs" />
     <Compile Include="Teacher.cs" />
+    <Compile Include="ucAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucAdmin.Designer.cs">
+      <DependentUpon>ucAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucClass.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -89,6 +95,12 @@
     </Compile>
     <Compile Include="ucHome.Designer.cs">
       <DependentUpon>ucHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucPayCalculate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucPayCalculate.Designer.cs">
+      <DependentUpon>ucPayCalculate.cs</DependentUpon>
     </Compile>
     <Compile Include="ucStudents.cs">
       <SubType>UserControl</SubType>
@@ -107,6 +119,12 @@
     </Compile>
     <Compile Include="ucTeacher.Designer.cs">
       <DependentUpon>ucTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucTeacherPay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucTeacherPay.Designer.cs">
+      <DependentUpon>ucTeacherPay.cs</DependentUpon>
     </Compile>
     <Compile Include="ucUsers.cs">
       <SubType>UserControl</SubType>
@@ -142,11 +160,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ucAdmin.resx">
+      <DependentUpon>ucAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucClass.resx">
       <DependentUpon>ucClass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucHome.resx">
       <DependentUpon>ucHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucPayCalculate.resx">
+      <DependentUpon>ucPayCalculate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucStudents.resx">
       <DependentUpon>ucStudents.cs</DependentUpon>
@@ -156,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ucTeacher.resx">
       <DependentUpon>ucTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucTeacherPay.resx">
+      <DependentUpon>ucTeacherPay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucUsers.resx">
       <DependentUpon>ucUsers.cs</DependentUpon>

@@ -20,21 +20,24 @@ namespace School_Management_System
         private void btnAdmin_Click(object sender, EventArgs e)
         {
             Cache.activeUC.Hide();
-            Cache.ucUsers.Show();
-            Cache.activeUC = Cache.ucUsers;
+            Cache.ucAdmin.Show();
+            Cache.activeUC = Cache.ucAdmin;
         }
 
         private void btnAdmission_Click(object sender, EventArgs e)
         {
             Cache.activeUC.Hide();
-            Cache.ucTeacher.Show();
-            Cache.activeUC = Cache.ucTeacher;
-            
+            Cache.ucStudent.Show();
+            Cache.activeUC = Cache.ucStudent;
         }
 
         private void usSideNav_Load(object sender, EventArgs e)
         {
-
+            if (!Cache.isAdmin)
+            {
+                btnAdmin.Hide();
+            }
+            else btnAdmin.Show();
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -43,6 +46,13 @@ namespace School_Management_System
             Cache.ucHome.Show();
             Cache.activeUC = Cache.ucHome;
             
+        }
+
+        private void btnPay_Click(object sender, EventArgs e)
+        {
+            Cache.activeUC.Hide();
+            Cache.ucTeacherPay.Show();
+            Cache.activeUC = Cache.ucTeacherPay;
         }
     }
 }

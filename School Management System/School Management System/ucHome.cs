@@ -44,6 +44,7 @@ namespace School_Management_System
             BindingSource source = new BindingSource();
             source.DataSource = getClass();
             dgvHome.DataSource = source;
+            dgvHome.Columns[1].Visible = false;
         }
 
         private void btnEmployees_Click(object sender, EventArgs e)

@@ -33,19 +33,19 @@
             this.txtClassName = new System.Windows.Forms.TextBox();
             this.btnDone = new System.Windows.Forms.Button();
             this.dgvClasses = new System.Windows.Forms.DataGridView();
-            this.lblClassName = new System.Windows.Forms.Label();
-            this.classNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.classBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.classNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.classBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lblClassName = new System.Windows.Forms.Label();
+            this.classNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClasses)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.classBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAddClass
             // 
-            this.btnAddClass.Location = new System.Drawing.Point(338, 19);
+            this.btnAddClass.Location = new System.Drawing.Point(209, 52);
             this.btnAddClass.Name = "btnAddClass";
             this.btnAddClass.Size = new System.Drawing.Size(75, 23);
             this.btnAddClass.TabIndex = 0;
@@ -55,14 +55,14 @@
             // 
             // txtClassName
             // 
-            this.txtClassName.Location = new System.Drawing.Point(296, 75);
+            this.txtClassName.Location = new System.Drawing.Point(167, 108);
             this.txtClassName.Name = "txtClassName";
             this.txtClassName.Size = new System.Drawing.Size(100, 20);
             this.txtClassName.TabIndex = 1;
             // 
             // btnDone
             // 
-            this.btnDone.Location = new System.Drawing.Point(442, 73);
+            this.btnDone.Location = new System.Drawing.Point(313, 106);
             this.btnDone.Name = "btnDone";
             this.btnDone.Size = new System.Drawing.Size(75, 23);
             this.btnDone.TabIndex = 2;
@@ -81,32 +81,12 @@
             this.Column1,
             this.Column2});
             this.dgvClasses.DataSource = this.classBindingSource;
-            this.dgvClasses.Location = new System.Drawing.Point(184, 128);
+            this.dgvClasses.Location = new System.Drawing.Point(55, 161);
             this.dgvClasses.Name = "dgvClasses";
             this.dgvClasses.ReadOnly = true;
-            this.dgvClasses.Size = new System.Drawing.Size(347, 185);
+            this.dgvClasses.Size = new System.Drawing.Size(361, 185);
             this.dgvClasses.TabIndex = 3;
             this.dgvClasses.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClasses_CellContentClick);
-            // 
-            // lblClassName
-            // 
-            this.lblClassName.AutoSize = true;
-            this.lblClassName.Location = new System.Drawing.Point(193, 78);
-            this.lblClassName.Name = "lblClassName";
-            this.lblClassName.Size = new System.Drawing.Size(63, 13);
-            this.lblClassName.TabIndex = 4;
-            this.lblClassName.Text = "Class Name";
-            // 
-            // classNameDataGridViewTextBoxColumn
-            // 
-            this.classNameDataGridViewTextBoxColumn.DataPropertyName = "ClassName";
-            this.classNameDataGridViewTextBoxColumn.HeaderText = "ClassName";
-            this.classNameDataGridViewTextBoxColumn.Name = "classNameDataGridViewTextBoxColumn";
-            this.classNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // classBindingSource
-            // 
-            this.classBindingSource.DataSource = typeof(School_Management_System.Class);
             // 
             // classNameDataGridViewTextBoxColumn1
             // 
@@ -131,6 +111,26 @@
             this.Column2.Text = "Delete";
             this.Column2.UseColumnTextForButtonValue = true;
             // 
+            // classBindingSource
+            // 
+            this.classBindingSource.DataSource = typeof(School_Management_System.Class);
+            // 
+            // lblClassName
+            // 
+            this.lblClassName.AutoSize = true;
+            this.lblClassName.Location = new System.Drawing.Point(64, 111);
+            this.lblClassName.Name = "lblClassName";
+            this.lblClassName.Size = new System.Drawing.Size(63, 13);
+            this.lblClassName.TabIndex = 4;
+            this.lblClassName.Text = "Class Name";
+            // 
+            // classNameDataGridViewTextBoxColumn
+            // 
+            this.classNameDataGridViewTextBoxColumn.DataPropertyName = "ClassName";
+            this.classNameDataGridViewTextBoxColumn.HeaderText = "ClassName";
+            this.classNameDataGridViewTextBoxColumn.Name = "classNameDataGridViewTextBoxColumn";
+            this.classNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // ucClass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -141,7 +141,7 @@
             this.Controls.Add(this.txtClassName);
             this.Controls.Add(this.btnAddClass);
             this.Name = "ucClass";
-            this.Size = new System.Drawing.Size(818, 424);
+            this.Size = new System.Drawing.Size(524, 424);
             this.Load += new System.EventHandler(this.ucClass_Load);
             this.VisibleChanged += new System.EventHandler(this.ucClass_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.dgvClasses)).EndInit();
