@@ -33,13 +33,13 @@
             this.txtAdvance = new System.Windows.Forms.TextBox();
             this.lblAdvance = new System.Windows.Forms.Label();
             this.lblMonth = new System.Windows.Forms.Label();
-            this.cbMonth = new System.Windows.Forms.ComboBox();
             this.lblAttendance = new System.Windows.Forms.Label();
             this.txtAttendance = new System.Windows.Forms.TextBox();
             this.btnCalculate = new System.Windows.Forms.Button();
             this.btnDone = new System.Windows.Forms.Button();
             this.lblCalculatePay = new System.Windows.Forms.Label();
             this.txtCalculatedPay = new System.Windows.Forms.TextBox();
+            this.txtMonth = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtPay
@@ -83,14 +83,6 @@
             this.lblMonth.Size = new System.Drawing.Size(37, 13);
             this.lblMonth.TabIndex = 5;
             this.lblMonth.Text = "Month";
-            // 
-            // cbMonth
-            // 
-            this.cbMonth.FormattingEnabled = true;
-            this.cbMonth.Location = new System.Drawing.Point(184, 81);
-            this.cbMonth.Name = "cbMonth";
-            this.cbMonth.Size = new System.Drawing.Size(237, 21);
-            this.cbMonth.TabIndex = 6;
             // 
             // lblAttendance
             // 
@@ -146,17 +138,25 @@
             this.txtCalculatedPay.Size = new System.Drawing.Size(237, 20);
             this.txtCalculatedPay.TabIndex = 11;
             // 
+            // txtMonth
+            // 
+            this.txtMonth.Enabled = false;
+            this.txtMonth.Location = new System.Drawing.Point(184, 80);
+            this.txtMonth.Name = "txtMonth";
+            this.txtMonth.Size = new System.Drawing.Size(237, 20);
+            this.txtMonth.TabIndex = 13;
+            // 
             // ucPayCalculate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txtMonth);
             this.Controls.Add(this.lblCalculatePay);
             this.Controls.Add(this.txtCalculatedPay);
             this.Controls.Add(this.btnDone);
             this.Controls.Add(this.btnCalculate);
             this.Controls.Add(this.lblAttendance);
             this.Controls.Add(this.txtAttendance);
-            this.Controls.Add(this.cbMonth);
             this.Controls.Add(this.lblMonth);
             this.Controls.Add(this.lblAdvance);
             this.Controls.Add(this.txtAdvance);
@@ -177,12 +177,12 @@
         private System.Windows.Forms.TextBox txtAdvance;
         private System.Windows.Forms.Label lblAdvance;
         private System.Windows.Forms.Label lblMonth;
-        private System.Windows.Forms.ComboBox cbMonth;
         private System.Windows.Forms.Label lblAttendance;
         private System.Windows.Forms.TextBox txtAttendance;
         private System.Windows.Forms.Button btnCalculate;
         private System.Windows.Forms.Button btnDone;
         private System.Windows.Forms.Label lblCalculatePay;
         private System.Windows.Forms.TextBox txtCalculatedPay;
+        private System.Windows.Forms.TextBox txtMonth;
     }
 }

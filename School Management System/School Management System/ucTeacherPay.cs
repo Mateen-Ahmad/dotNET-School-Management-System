@@ -21,26 +21,57 @@ namespace School_Management_System
 
         private void ucTeacherPay_Load(object sender, EventArgs e)
         {
-            ucPayCalculate1.Hide();
             show();
+            ucPayCalculate1.Hide();
         }
 
         private void show()
         {
-            showTeacherRecord();
+            dgvTeacherPay.Rows.Clear();
+            List<Teacher> teachers=showTeacherRecord();
+            for (int i=0; i<teachers.Count;i++)
+            {
+                dgvTeacherPay.Rows.Add(teachers[i].Index, teachers[i].Name, teachers[i].Pay, "Calculate", teachers[i].Month, teachers[i].CalculatedPay);
+            }
         }
 
-        private void showTeacherRecord()
+        private List<Teacher> showTeacherRecord()
         {
             List<Teacher> teachers = new List<Teacher>();
             SqlConnection connection = new SqlConnection(Cache.connection);
-            SqlCommand cmd = connection.CreateCommand();
             connection.Open();
-            cmd.CommandText= "select [index],name,pay from tbTeacher";
-            SqlDataAdapter adp = new SqlDataAdapter(cmd);
-            DataSet ds = new DataSet();
-            adp.Fill(ds);
-            dgvTeacherPay.DataSource = ds.Tables[0].DefaultView;
+            string query = "select [index],name,pay from tbTeacher";
+            SqlCommand cmd = new SqlCommand(query, connection);
+            SqlDataReader reader = cmd.ExecuteReader();
+            while(reader.Read())
+            {
+                Teacher teacher = new Teacher();
+                teacher.Index =Convert.ToInt32(reader[0]);
+                teacher.Name = reader[1].ToString();
+                teacher.Pay = Convert.ToInt32(reader[2]);
+                teacher.Month = "none";
+                teacher.CalculatedPay = 0;
+                teachers.Add(teacher);
+            }
+            reader.Close();
+            var month = DateTime.Today.ToString("MMMM");
+            MessageBox.Show(month);
+            for (int i=0; i<teachers.Count;i++)
+            {
+                query = "select month,calculatedPay from tbPayRecord where teacherIndex='" + teachers[i].Index + "' ";
+                cmd = new SqlCommand(query, connection);
+                reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    if(reader[0].ToString()==month)
+                    {
+                        teachers[i].Month = month;
+                        teachers[i].CalculatedPay = Convert.ToInt32(reader[1]);
+                    }
+                }
+                reader.Close();
+            }
+            return teachers;
         }
 
 
@@ -61,7 +92,10 @@ namespace School_Management_System
 
         private void ucPayCalculate1_VisibleChanged(object sender, EventArgs e)
         {
-            
+            if(!ucPayCalculate1.Visible)
+            {
+                show();
+            }
         }
     }
 }

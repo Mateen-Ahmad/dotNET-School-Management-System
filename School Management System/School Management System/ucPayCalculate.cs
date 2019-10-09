@@ -40,15 +40,13 @@ namespace School_Management_System
             MessageBox.Show("Talha");
             this.Show();
             txtPay.Text = Pay.ToString();
-            cbMonth.DataSource = CultureInfo.InvariantCulture.DateTimeFormat.MonthNames.Take(12).ToList();
-            cbMonth.SelectedItem = CultureInfo.InvariantCulture.DateTimeFormat.MonthNames[DateTime.Now.AddMonths(-1).Month - 1];
+            txtMonth.Text = DateTime.Today.ToString("MMMM");
         }
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
             attendance = int.Parse(txtAttendance.Text);
             advance = int.Parse(txtAdvance.Text);
-
             txtCalculatedPay.Text = calculatePay(attendance,advance).ToString();
         }
 
@@ -62,11 +60,10 @@ namespace School_Management_System
 
         private void btnDone_Click(object sender, EventArgs e)
         {
-            string month = cbMonth.SelectedItem.ToString();
+            string month = txtMonth.Text;
             DateTime dateTime = DateTime.UtcNow.Date;
             addTeacherPay(this.index, month, this.totalPay, false, dateTime);
             this.Hide();
-
         }
 
         private void addTeacherPay(int index, string month, int pay, bool recived, DateTime date)

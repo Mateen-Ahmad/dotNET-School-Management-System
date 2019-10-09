@@ -28,35 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.dgvTeacherPay = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ucPayCalculate1 = new School_Management_System.ucPayCalculate();
-            this.teacherBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.indexDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.payDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.calculate = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.calculatedPayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.monthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ucPayCalculate1 = new School_Management_System.ucPayCalculate();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTeacherPay)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teacherBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvTeacherPay
             // 
             this.dgvTeacherPay.AllowUserToAddRows = false;
             this.dgvTeacherPay.AllowUserToDeleteRows = false;
-            this.dgvTeacherPay.AutoGenerateColumns = false;
             this.dgvTeacherPay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTeacherPay.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.indexDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn,
-            this.payDataGridViewTextBoxColumn,
+            this.Column1,
+            this.Column2,
+            this.Column3,
             this.calculate,
-            this.calculatedPayDataGridViewTextBoxColumn,
-            this.monthDataGridViewTextBoxColumn});
-            this.dgvTeacherPay.DataSource = this.teacherBindingSource;
+            this.Column4,
+            this.Column5});
             this.dgvTeacherPay.Location = new System.Drawing.Point(3, 255);
             this.dgvTeacherPay.Name = "dgvTeacherPay";
             this.dgvTeacherPay.ReadOnly = true;
@@ -69,6 +64,44 @@
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Tag";
             this.dataGridViewTextBoxColumn1.HeaderText = "Tag";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Index";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Name";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Pay";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // calculate
+            // 
+            this.calculate.HeaderText = "Calculate";
+            this.calculate.Name = "calculate";
+            this.calculate.ReadOnly = true;
+            this.calculate.Text = "Calculate Pay";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Month";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Calculated Pay";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 125;
             // 
             // ucPayCalculate1
             // 
@@ -83,52 +116,6 @@
             this.ucPayCalculate1.Load += new System.EventHandler(this.load_payCalculate);
             this.ucPayCalculate1.VisibleChanged += new System.EventHandler(this.ucPayCalculate1_VisibleChanged);
             // 
-            // teacherBindingSource
-            // 
-            this.teacherBindingSource.DataSource = typeof(School_Management_System.Teacher);
-            // 
-            // indexDataGridViewTextBoxColumn
-            // 
-            this.indexDataGridViewTextBoxColumn.DataPropertyName = "Index";
-            this.indexDataGridViewTextBoxColumn.HeaderText = "Index";
-            this.indexDataGridViewTextBoxColumn.Name = "indexDataGridViewTextBoxColumn";
-            this.indexDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // payDataGridViewTextBoxColumn
-            // 
-            this.payDataGridViewTextBoxColumn.DataPropertyName = "Pay";
-            this.payDataGridViewTextBoxColumn.HeaderText = "Pay";
-            this.payDataGridViewTextBoxColumn.Name = "payDataGridViewTextBoxColumn";
-            this.payDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // calculate
-            // 
-            this.calculate.HeaderText = "Calculate";
-            this.calculate.Name = "calculate";
-            this.calculate.ReadOnly = true;
-            this.calculate.Text = "Calculate Pay";
-            // 
-            // calculatedPayDataGridViewTextBoxColumn
-            // 
-            this.calculatedPayDataGridViewTextBoxColumn.DataPropertyName = "CalculatedPay";
-            this.calculatedPayDataGridViewTextBoxColumn.HeaderText = "CalculatedPay";
-            this.calculatedPayDataGridViewTextBoxColumn.Name = "calculatedPayDataGridViewTextBoxColumn";
-            this.calculatedPayDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // monthDataGridViewTextBoxColumn
-            // 
-            this.monthDataGridViewTextBoxColumn.DataPropertyName = "Month";
-            this.monthDataGridViewTextBoxColumn.HeaderText = "Month";
-            this.monthDataGridViewTextBoxColumn.Name = "monthDataGridViewTextBoxColumn";
-            this.monthDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // ucTeacherPay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -139,7 +126,6 @@
             this.Size = new System.Drawing.Size(717, 408);
             this.Load += new System.EventHandler(this.ucTeacherPay_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTeacherPay)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teacherBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -148,13 +134,12 @@
 
         private System.Windows.Forms.DataGridView dgvTeacherPay;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.BindingSource teacherBindingSource;
         private ucPayCalculate ucPayCalculate1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn indexDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn payDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewButtonColumn calculate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn calculatedPayDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn monthDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }
